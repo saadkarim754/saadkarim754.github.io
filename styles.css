@@ -20,7 +20,14 @@ body {
     width: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 1px solid #fff;
+     border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.info-box {
+    background-color: rgba(75, 0, 130, 0.8); /* Dark purple with opacity */
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 h1 {
@@ -101,6 +108,9 @@ footer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     border-top: 2px solid #fff;
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
