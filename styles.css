@@ -100,7 +100,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
-    border-top: 1px solid #fff;
+    border-top: 2px solid #fff;
 }
 
 @media (max-width: 768px) {
