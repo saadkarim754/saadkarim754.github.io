@@ -4,7 +4,7 @@ body {
     color: #ffffff; /* White text color */
     background: url('git.jpg') no-repeat center center fixed;
     background-size: cover;
-    margin: 1;
+    margin: 0;
     padding: 0;
 }
 
