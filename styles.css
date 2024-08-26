@@ -103,6 +103,24 @@ footer {
     border-top: 2px solid #fff;
 }
 
+
+.dark-purple-box {
+            background-color: #4B0082; /* Dark purple */
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: center;
+        }
+        .email-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+
 @media (max-width: 768px) {
     .experience-grid,
     .project-grid {
