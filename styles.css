@@ -1,13 +1,16 @@
 body {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Thinner font */
+    color: #ffffff; /* White text color */
+    background: url('git.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
 
 .header-container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background: url('git-mov.gif') no-repeat center center;
+    background-size: cover;
     text-align: center;
     padding: 40px 20px;
     border-bottom: 1px solid #fff;
@@ -26,14 +29,18 @@ h1 {
 }
 
 .email-link {
-    color: #fcd535;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.about-me, .experience, .projects, .skills, .contact {
+.about-me,
+.experience,
+.projects,
+.skills,
+.contact {
     padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 20px auto;
     max-width: 1200px;
     border-radius: 8px;
@@ -45,16 +52,18 @@ h2 {
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 2em;
-    color: #fcd535;
+    color: #ffffff;
 }
 
-.experience-grid, .project-grid {
+.experience-grid,
+.project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.job, .project {
+.job,
+.project {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 8px;
@@ -68,8 +77,8 @@ h2 {
 }
 
 .skills li {
-    background-color: #fcd535;
-    color: #000;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
     padding: 10px;
     margin: 5px 0;
     border-radius: 4px;
@@ -77,19 +86,26 @@ h2 {
 }
 
 .contact .social-links a {
-    color: #fcd535;
+    color: #ffffff;
     text-decoration: none;
     margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.contact .social-links a:hover {
+    color: #fcd535; /* Slight yellow on hover for contrast */
 }
 
 footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #fff;
 }
 
 @media (max-width: 768px) {
-    .experience-grid, .project-grid {
+    .experience-grid,
+    .project-grid {
         grid-template-columns: 1fr;
     }
 }
