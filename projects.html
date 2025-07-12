@@ -9,6 +9,29 @@
     <link rel="icon" href="title.png" type="image/png">
 </head>
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-title">Saad Karim</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-btn" data-page="index">Home</button>
+                <button class="nav-btn" data-page="about">About</button>
+                <button class="nav-btn" data-page="experience">Experience</button>
+                <button class="nav-btn active" data-page="projects">Projects</button>
+                <button class="nav-btn" data-page="skills">Skills</button>
+                <button class="nav-btn" data-page="contact">Contact</button>
+            </div>
+            <div class="nav-status">
+                <div class="nav-led red"></div>
+                <div class="nav-led green"></div>
+                <div class="nav-led blue active"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Binary Rain Background -->
     <div class="binary-rain"></div>
     
@@ -249,16 +272,30 @@
                     <div class="term-btn minimize"></div>
                     <div class="term-btn maximize"></div>
                 </div>
-                <div class="terminal-title">project_details.json</div>
+                <div class="terminal-title">project_details.txt</div>
             </div>
             <div class="terminal-content">
-                <div class="json-output">
-                    <div class="json-line">{</div>
-                    <div class="json-line indent1">"project": "Select a project to view details",</div>
-                    <div class="json-line indent1">"status": "waiting",</div>
-                    <div class="json-line indent1">"technologies": [],</div>
-                    <div class="json-line indent1">"description": "Click on any project IC to see details"</div>
-                    <div class="json-line">}</div>
+                <div class="project-output">
+                    <div class="project-header">PROJECT INFORMATION</div>
+                    <div class="project-line">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+                    <div class="project-info">
+                        <div class="info-item">
+                            <span class="info-label">NAME:</span>
+                            <span class="info-value">Select a project to view details</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">STATUS:</span>
+                            <span class="info-value status-waiting">WAITING</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">TECH:</span>
+                            <span class="info-value">Click on any project IC to see details</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">DESC:</span>
+                            <span class="info-value">Project description will appear here</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="terminal-cursor">█</div>
             </div>

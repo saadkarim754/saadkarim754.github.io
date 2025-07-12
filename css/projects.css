@@ -2,33 +2,22 @@
    PROJECTS PAGE - PCB BOARD STYLES
    ================================================ */
 
-/* Shared navigation styles */
-.electrical-nav {
+/* Shared navigation styles - Updated for top nav */
+.top-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
   background: rgba(10, 25, 47, 0.95);
-  border-bottom: 2px solid var(--accent-teal);
   backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--accent-teal);
+  box-shadow: 0 2px 20px rgba(100, 255, 218, 0.1);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  max-width: 1400px;
-  margin: 0 auto;
+.projects-container {
+  padding-top: 80px;
 }
-
-.nav-button {
-  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-  border: none;
-  border-radius: 8px;
-  color: var(--text-white);
-  font-family: 'Courier New', monospace;
   font-weight: bold;
   padding: 10px 20px;
   cursor: pointer;
@@ -518,24 +507,69 @@
 }
 
 .terminal-content {
-  padding: 20px;
+  background: #1a1a1a;
+  padding: 15px;
   font-family: 'Courier New', monospace;
-  font-size: 14px;
-  line-height: 1.6;
-  max-height: 200px;
+  font-size: 12px;
+  line-height: 1.4;
+  max-height: 180px;
   overflow-y: auto;
 }
 
-.json-output {
+.project-output {
   color: var(--text-white);
 }
 
-.json-line {
-  margin: 2px 0;
+.project-header {
+  color: var(--accent-teal);
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-.indent1 { margin-left: 20px; }
-.indent2 { margin-left: 40px; }
+.project-line {
+  color: var(--accent-teal);
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.info-label {
+  color: var(--accent-green);
+  font-weight: bold;
+  min-width: 50px;
+  font-size: 11px;
+}
+
+.info-value {
+  color: var(--text-white);
+  flex: 1;
+  font-size: 11px;
+}
+
+.status-waiting {
+  color: var(--warning-orange);
+}
+
+.status-active {
+  color: var(--accent-green);
+}
+
+.status-completed {
+  color: var(--accent-teal);
+}
 
 .terminal-cursor {
   color: var(--accent-green);

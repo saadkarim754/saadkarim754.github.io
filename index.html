@@ -9,6 +9,29 @@
     <meta name="description" content="Interactive electrical engineering portfolio of Mian Saad Karim - PIEAS Student exploring UAVs, robotics, and embedded systems">
 </head>
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-title">Saad Karim</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-btn" data-page="index">Home</button>
+                <button class="nav-btn" data-page="about">About</button>
+                <button class="nav-btn" data-page="experience">Experience</button>
+                <button class="nav-btn" data-page="projects">Projects</button>
+                <button class="nav-btn" data-page="skills">Skills</button>
+                <button class="nav-btn" data-page="contact">Contact</button>
+            </div>
+            <div class="nav-status">
+                <div class="nav-led red"></div>
+                <div class="nav-led green active"></div>
+                <div class="nav-led blue"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Binary Rain Background -->
     <div class="binary-rain"></div>
     
@@ -21,8 +44,8 @@
         <div class="lcd-container">
             <div class="lcd-display">
                 <div class="lcd-screen">
-                    <div class="lcd-line line1"></div>
-                    <div class="lcd-line line2"></div>
+                    <div class="lcd-line line1" id="lcdLine1"></div>
+                    <div class="lcd-line line2" id="lcdLine2"></div>
                 </div>
             </div>
         </div>
@@ -31,7 +54,7 @@
         <div class="oled-container">
             <div class="oled-display">
                 <div class="oled-screen">
-                    <img src="title.png" alt="Saad Karim Profile" class="profile-image">
+                    <img src="miansaadkarim.jpeg" alt="Saad Karim Profile" class="profile-image" id="profileImg">
                     <div class="scan-lines"></div>
                 </div>
                 <div class="oled-border-glow"></div>
@@ -42,7 +65,7 @@
         <div class="control-panel">
             <div>
                 <button class="arduino-button" data-page="about">
-                    <div class="button-led"></div>
+                    <div class="button-led red"></div>
                     ABOUT
                 </button>
                 <div class="button-label">Personal Info</div>
@@ -50,7 +73,7 @@
             
             <div>
                 <button class="arduino-button" data-page="experience">
-                    <div class="button-led"></div>
+                    <div class="button-led green"></div>
                     EXP
                 </button>
                 <div class="button-label">Work History</div>
@@ -58,7 +81,7 @@
             
             <div>
                 <button class="arduino-button" data-page="projects">
-                    <div class="button-led"></div>
+                    <div class="button-led blue"></div>
                     PROJ
                 </button>
                 <div class="button-label">Project Hub</div>
@@ -66,7 +89,7 @@
             
             <div>
                 <button class="arduino-button" data-page="skills">
-                    <div class="button-led"></div>
+                    <div class="button-led yellow"></div>
                     SKILLS
                 </button>
                 <div class="button-label">Tech Stack</div>
@@ -74,7 +97,7 @@
             
             <div>
                 <button class="arduino-button" data-page="contact">
-                    <div class="button-led"></div>
+                    <div class="button-led purple"></div>
                     CONTACT
                 </button>
                 <div class="button-label">Connect</div>
@@ -82,30 +105,36 @@
             
             <div>
                 <button class="arduino-button" onclick="window.open('https://github.com/saadkarim754', '_blank')">
-                    <div class="button-led"></div>
+                    <div class="button-led cyan"></div>
                     GITHUB
                 </button>
                 <div class="button-label">Repository</div>
             </div>
         </div>
         
-        <!-- Status LED Panel -->
-        <div class="status-panel">
-            <div class="status-led">
-                <div class="led-indicator" data-led="power"></div>
-                <div class="led-label">Power</div>
-            </div>
-            <div class="status-led">
-                <div class="led-indicator" data-led="system"></div>
-                <div class="led-label">System</div>
-            </div>
-            <div class="status-led">
-                <div class="led-indicator" data-led="network"></div>
-                <div class="led-label">Network</div>
-            </div>
-            <div class="status-led">
-                <div class="led-indicator" data-led="data"></div>
-                <div class="led-label">Data</div>
+        <!-- Enhanced Sensor Panel -->
+        <div class="sensor-panel">
+            <div class="sensor-group">
+                <div class="sensor-item">
+                    <div class="sensor-led red active" data-sensor="temp"></div>
+                    <div class="sensor-label">TEMP</div>
+                    <div class="sensor-value">23°C</div>
+                </div>
+                <div class="sensor-item">
+                    <div class="sensor-led green active" data-sensor="power"></div>
+                    <div class="sensor-label">PWR</div>
+                    <div class="sensor-value">5.0V</div>
+                </div>
+                <div class="sensor-item">
+                    <div class="sensor-led blue active" data-sensor="data"></div>
+                    <div class="sensor-label">DATA</div>
+                    <div class="sensor-value">1.2Gb</div>
+                </div>
+                <div class="sensor-item">
+                    <div class="sensor-led yellow active" data-sensor="freq"></div>
+                    <div class="sensor-label">FREQ</div>
+                    <div class="sensor-value">2.4GHz</div>
+                </div>
             </div>
         </div>
     </div>

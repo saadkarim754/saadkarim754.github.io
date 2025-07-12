@@ -246,46 +246,57 @@ class ProjectsController {
     const project = this.projectData[projectKey];
     if (!project) return;
     
-    const terminalContent = document.querySelector('.json-output');
+    const terminalContent = document.querySelector('.project-output');
     if (!terminalContent) return;
     
-    // Create JSON display
-    const jsonData = `{
-  "project": "${project.name}",
-  "status": "${project.status}",
-  "category": "${project.category}",
-  "complexity": "${project.complexity}",
-  "technologies": [
-    ${project.technologies.map(tech => `"${tech}"`).join(',\n    ')}
-  ],
-  "description": "${project.description}",
-  "links": {
-    ${project.github ? `"github": "${project.github}"` : ''}${project.live ? `,\n    "live": "${project.live}"` : ''}
-  }
-}`;
+    // Update project information in clean format
+    const projectInfo = `
+      <div class="project-header">PROJECT INFORMATION</div>
+      <div class="project-line">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+      <div class="project-info">
+        <div class="info-item">
+          <span class="info-label">NAME:</span>
+          <span class="info-value">${project.name}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">STATUS:</span>
+          <span class="info-value status-${project.status}">${project.status.toUpperCase()}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">TECH:</span>
+          <span class="info-value">${project.technologies.join(', ')}</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">DESC:</span>
+          <span class="info-value">${project.description}</span>
+        </div>
+        ${project.github ? `
+        <div class="info-item">
+          <span class="info-label">REPO:</span>
+          <span class="info-value"><a href="${project.github}" target="_blank" style="color: var(--accent-teal);">${project.github}</a></span>
+        </div>` : ''}
+        ${project.live ? `
+        <div class="info-item">
+          <span class="info-label">DEMO:</span>
+          <span class="info-value"><a href="${project.live}" target="_blank" style="color: var(--accent-green);">${project.live}</a></span>
+        </div>` : ''}
+      </div>
+    `;
     
-    // Animate typing effect
-    this.typeInTerminal(terminalContent, jsonData);
+    // Animate display
+    this.animateTerminalUpdate(terminalContent, projectInfo);
   }
 
-  typeInTerminal(container, text) {
-    container.innerHTML = '';
-    let i = 0;
+  animateTerminalUpdate(container, content) {
+    container.style.opacity = '0.5';
+    container.style.transform = 'translateY(10px)';
     
-    const timer = setInterval(() => {
-      if (i < text.length) {
-        container.innerHTML = text.substring(0, i + 1) + '<span class="terminal-cursor">█</span>';
-        i++;
-        
-        // Play typing sound occasionally
-        if (Math.random() > 0.8) {
-          this.playTypingSound();
-        }
-      } else {
-        clearInterval(timer);
-        container.innerHTML = text;
-      }
-    }, 20);
+    setTimeout(() => {
+      container.innerHTML = content;
+      container.style.transition = 'all 0.3s ease';
+      container.style.opacity = '1';
+      container.style.transform = 'translateY(0)';
+    }, 150);
   }
 
   // ================================================

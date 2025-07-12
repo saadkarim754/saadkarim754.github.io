@@ -7,6 +7,7 @@ class ElectricalPortfolio {
     this.isInitialized = false;
     this.audioContext = null;
     this.currentPage = 'home';
+    this.lcdAnimated = false;
     this.init();
   }
 
@@ -16,9 +17,12 @@ class ElectricalPortfolio {
     this.createBinaryRain();
     this.createCircuitBackground();
     this.initLCDDisplay();
+    this.initProfileImage();
     this.initAudioFeedback();
     this.setupNavigationButtons();
+    this.setupTopNavigation();
     this.setupStatusLEDs();
+    this.setupSensorPanel();
     this.startSystemAnimations();
     
     this.isInitialized = true;
@@ -95,8 +99,10 @@ class ElectricalPortfolio {
   // LCD DISPLAY ANIMATIONS
   // ================================================
   initLCDDisplay() {
-    const line1 = document.querySelector('.lcd-line.line1');
-    const line2 = document.querySelector('.lcd-line.line2');
+    if (this.lcdAnimated) return; // Prevent multiple animations
+    
+    const line1 = document.getElementById('lcdLine1');
+    const line2 = document.getElementById('lcdLine2');
     
     if (!line1 || !line2) return;
 
@@ -110,9 +116,32 @@ class ElectricalPortfolio {
       // After line 1, type line 2
       setTimeout(() => {
         const text2 = 'MIAN SAAD KARIM<span class="lcd-cursor"></span>';
-        this.typewriterEffect(line2, text2, 80);
+        this.typewriterEffect(line2, text2, 80, () => {
+          this.lcdAnimated = true; // Mark as animated
+        });
       }, 500);
     });
+  }
+
+  initProfileImage() {
+    const profileImg = document.getElementById('profileImg');
+    if (profileImg) {
+      // Trigger the CSS animation by ensuring the image is loaded
+      profileImg.onload = () => {
+        console.log('Profile image loaded with cool effect');
+      };
+      
+      // Add hover effect
+      profileImg.addEventListener('mouseenter', () => {
+        profileImg.style.filter = 'contrast(1.5) brightness(1.4) saturate(1.2)';
+        profileImg.style.transform = 'scale(1.05)';
+      });
+      
+      profileImg.addEventListener('mouseleave', () => {
+        profileImg.style.filter = 'contrast(1.2) brightness(1.1) saturate(1)';
+        profileImg.style.transform = 'scale(1)';
+      });
+    }
   }
 
   typewriterEffect(element, text, speed, callback) {
@@ -353,6 +382,81 @@ class ElectricalPortfolio {
         this.activateLED('data');
       }
     }, 100);
+  }
+
+  // ================================================
+  // SENSOR PANEL SYSTEM
+  // ================================================
+  setupSensorPanel() {
+    const sensorLeds = document.querySelectorAll('.sensor-led');
+    const sensorValues = document.querySelectorAll('.sensor-value');
+    
+    // Animate sensors periodically
+    setInterval(() => {
+      sensorLeds.forEach((led, index) => {
+        // Random blink pattern
+        if (Math.random() > 0.7) {
+          led.style.opacity = '0.3';
+          setTimeout(() => {
+            led.style.opacity = '1';
+          }, 200);
+        }
+      });
+      
+      // Update sensor values occasionally
+      if (Math.random() > 0.8) {
+        this.updateSensorValues(sensorValues);
+      }
+    }, 2000);
+  }
+
+  updateSensorValues(sensorValues) {
+    const values = [
+      `${(20 + Math.random() * 10).toFixed(1)}°C`,
+      `${(4.8 + Math.random() * 0.4).toFixed(1)}V`,
+      `${(1.0 + Math.random() * 0.5).toFixed(1)}Gb`,
+      `${(2.3 + Math.random() * 0.2).toFixed(1)}GHz`
+    ];
+    
+    sensorValues.forEach((value, index) => {
+      if (values[index]) {
+        value.textContent = values[index];
+      }
+    });
+  }
+
+  // ================================================
+  // TOP NAVIGATION MENU
+  // ================================================
+  setupTopNavigation() {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    
+    navButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all buttons
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Play navigation sound
+        this.playButtonSound(900, 100);
+        
+        // Navigate
+        const page = button.dataset.page;
+        if (page) {
+          this.navigateToPage(page);
+        }
+      });
+    });
+
+    // Set initial active state
+    const currentBtn = document.querySelector('.nav-btn[data-page="index"]');
+    if (currentBtn) {
+      currentBtn.classList.add('active');
+    }
   }
 
   // ================================================
