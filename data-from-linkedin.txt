@@ -1,0 +1,447 @@
+Sure, here is the properly arranged text with headings, and sections separated by commas and arrows:
+Mian Saad Karim - LinkedIn Profile 
+Current Date and Time: 12/07/2025, 17:40 (Please note: Some sections also show a time of 17:39 on 12/07/2025) 
+
+
+Professional Summary
+NASTY Student MEAS exploring war UAVS 
+
+
+Experience 
+
+
+Intern at National Aerospace Science & Technology Park (NASTP) 
+
+
+Duration: July 2025 - Present (1 month) 
+
+
+Location: Islamabad, Pakistan (Onsite) 
+
+
+Responsibilities: Work on simulations of Robots and drones in sandbox environments 
+
+
+Skills: Information Technology Infrastructure, Aerospace, Drones 
+
+
+IT Manager at PIEAS SPORTICS SOCIETY 
+
+
+Duration: 2004 - Present (ongoing) 
+
+
+Location: Islamabad, Pakistan 
+
+
+Responsibilities: Built the website and managed all social media channels, keeping the community connected and engaged 
+
+
+Skills: Management, Cascading Style Sheets (CSS), Infrastructure Management, Bootstrap (Framework), GitHub 
+
+
+Internee at PAC Kamra (Pakistan Aeronautical Complex Kamra) 
+
+
+Duration: July 2024 - July 2024 (1 month) 
+
+
+Location: Kamra, Pakistan (Onsite) 
+
+
+Highlights: Gained hands-on experience in avionics production and testing, including working with RF testers and visiting The Aircraft Manufacturing Factory. Grateful for the invaluable learning and support from the PAC Kamra team.
+
+
+
+Skills: Program Management, C (Programming Language), Engineering 
+
+
+Hashtags: #Aerospace Engineering, #PACKamra 
+
+
+Education 
+
+
+Pakistan Institute of Engineering & Applied Sciences (PIEAS) 
+
+
+Degree: Bachelor of Science (BS) in Electrical and Electronics Engineering 
+
+
+Duration: September 2022 - March 2026 
+
+
+Skills: Electrical Engineering 
+
+
+Islamia College Peshawar (Chartered University) 
+
+
+Degree: High School Diploma, Computer Engineering 
+
+
+Duration: September 2020 - May 2022 
+
+
+Grade: 91% 
+
+
+Skills: Engineering Project Management 
+
+
+The Peace Schools and Colleges 
+
+
+Degree: Matriculation, Computer Science 
+
+
+Duration: April 2018 - April 2020 
+
+
+Grade: 93% 
+
+
+Skills: C (Programming Language) 
+
+
+Projects 
+
+
+QR-Based Attendance Management System 
+
+
+Duration: December 2024 - Present 
+
+
+Description: A streamlined and secure web-based attendance tracking system utilizing QR codes for efficient session management.
+
+
+Live at: https://www.google.com/search?q=saadkarim754.pythonanywhere.com 
+
+
+Skills: Web, Python (Programming Language) 
+
+
+GitHub: saadkarim754/QR-ATTENDANCE-SYSTEM 
+
+
+PIEAS Sportics Web 
+
+
+Duration: July 2024 - Present 
+
+
+Association: PIEAS SPORTICS SOCIETY 
+
+
+Description: Developed a comprehensive web application for the PIEAS SPORTICS SOCIETY as a final project, providing hands-on experience with Flask, SQL, and web development.
+
+
+Key Features: User Authentication and Authorization, Event Creation and Management, Admin Management with Restricted Access, Dynamic Flash Messaging, Responsive Design, CSV Download for Event Registrations.
+
+
+Skills: HTML, Bootstrap (Framework), GitHub, Front-End Development, C (Programming Language), Python (Programming Language), Cascading Style Sheets (CSS), SQL, Management-Git 
+
+
+GitHub: saadkarim754/PSS-New 
+
+
+Design and Modeling of 6 DOF Robot 
+
+
+Duration: April 2025 - May 2025 
+
+
+Association: Pakistan Institute of Engineering & Applied Sciences (PIEAS) 
+
+
+Description: Details the design, modeling, and simulation of a six-degree-of-freedom (6 DOF) robotic arm specifically tailored for automated welding applications, addressing challenges of manual welding like inconsistency, safety hazards, and scalability limitations. The methodology integrates modular mechanical component design via Onshape/SolidWorks and URDF modeling for multi-platform compatibility. Comprehensive kinematic and workspace analyses were conducted using MATLAB, complemented by initial trajectory planning and control implementation within the CoppeliaSim environment. This study demonstrates the robot's capability for precise and repeatable welding operations, laying a foundational framework for cost-effective and autonomous fabrication systems enhancing both safety and efficiency.
+
+
+
+
+
+
+Skills: Onshape, SOLIDWORKS, CoppeliaSim 
+
+
+GitHub: saadkarim754/Onshape_To_robot 
+
+
+News Classification using Gradient Boosting 
+
+
+Duration: October 2024 - November 2024 
+
+
+Description: Developed a machine learning model to classify news articles as fake or true. The project involved preprocessing large text datasets, cleaning and tokenizing text, and transforming it into numerical features using a Bag-of-Words approach. A Gradient Boosting classifier was trained on the data for effective classification, implemented in Python (Google Colab) and MATLAB, with the model exported for future real-world applications.
+
+
+
+
+Skills: Machine Learning, Python (Programming Language) 
+
+
+GitHub: saadkarim754/Fake_News_classification 
+
+
+Biometric Access Control System with IoT Integration 
+
+
+Duration: October 2024 - October 2024 
+
+
+Description: Design and implementation of a secure access system using an AS608 fingerprint sensor and two ESP32 microcontrollers. The system authenticates users through biometric fingerprint recognition and controls access via a servo motor, simulating a gate. Successful authentication events are logged and monitored on Adafruit IO, an IoT platform. Primary goals include developing a reliable and user-friendly biometric authentication mechanism, enabling IoT-based real-time activity logging, and ensuring modularity by distributing tasks across multiple microcontrollers.
+
+
+
+
+
+Skills: Electrical Engineering 
+
+
+GitHub: saadkarim754/Smart-Biometric-Access-System-with-IoT-Integration 
+
+
+Betting on Random Events! 
+
+
+Description: Challenges a computer in Rock-Paper-Scissors, placing bets on each round, with options to switch between equal, weighted, and strategy-based probability modes.
+
+
+Skills: MATLAB 
+
+
+Exploring Creativity with Desmos! 
+
+
+Description: Small projects using Desmos to blend math and art, from visualizing complex functions to creating geometric patterns.
+
+
+Skills: Desmos, Mathematics, Mathematical Programming 
+
+
+FPGA-Based Dual-Axis Servo Control with UART GUI Interface 
+
+
+Association: Pakistan Institute of Engineering & Applied Sciences (PIEAS) 
+
+
+Description: Built a real-time servo control system using Verilog on a Spartan-3E FPGA capable of single-axis (button-based) and dual-axis (UART-based) control. Developed a Python GUI using Tkinter to send smooth PWM commands over UART. Features precise servo movement, UART interfacing, and clean pin-mapped HDL modules.
+
+
+Tech Used: Verilog, Spartan-3E FPGA, Python (Tkinter, PySerial), UART, PWM 
+
+
+Skills: Field-Programmable Gate Arrays (FPGA), Python 
+
+
+GitHub: saadkarim754/FPGA_servo_control 
+
+
+Simulation of Single Phase Square Wave and SPWM Inverters 
+
+
+Association: Pakistan Institute of Engineering & Applied Sciences (PIEAS) 
+
+
+Goal: Find an optimal operating point for an SPWM Inverter (Full Bridge) in terms of its THD. The experiment discusses design considerations for such inverters.
+
+
+Skills: Electronics, Power Electronics 
+
+
+GitHub: https://github.com/saadkarim754/Full_Bridge_spwm_INVERTER 
+
+
+VGA Graphics and Game Design on Spartan-3E FPGA 
+
+
+Association: Pakistan Institute of Engineering & Applied Sciences (PIEAS) 
+
+
+Project Highlight: Airplane Game on FPGA with VGA Output (Verilog). Hardware-level project implementing a minimalist airplane game using Verilog on a Spartan-3E FPGA board.
+
+
+Main Objective: Generate a real-time VGA signal (640x480 resolution) and create an interactive visual experience entirely through register transfer level (RTL) design.
+
+
+Key Features: VGA Signal Generation (Accurate Hsync and Vsync pulse generation for VGA timing compliance), Pixel-Based RGB Output (Pixel positions determine RGB values for rendering dynamic scenes), Interactive Triangular Plane (A triangle-shaped "plane" moves horizontally based on slide switch inputs), Animated Scenery (Real-time drawing of parabolic mountains and scrolling clouds using logic equations), Clock Division (50 MHz system clock divided down to 25 MHz for correct VGA pixel timing), Modular Verilog Design (Clean separation of modules: Sync Generator, Horizontal & Vertical Counters, Pixel Logic, Top-Level Integrator).
+
+
+Tools & Technologies: Verilog HDL, Spartan-3E FPGA Board, Xilinx ISE Design Suite, ModelSim (for simulation and verification), VGA Monitor.
+
+
+Project Outcome: Pure HDL project with no CPU, no external libraries, no software rendering. All visuals generated through timing-based logic using Verilog, demonstrating foundational digital design.
+
+
+
+Skills: Verilog, Xilinx ISE 
+
+
+GitHub: saadkarim754/VGA_on_spartan3E_starter_kit 
+
+
+Licenses & Certifications 
+
+
+Introduction to Parametric Feature-Based CAD 
+
+
+Issuer: Onshape by PTC 
+
+
+Issued: January 2015 
+
+
+Rocket Science for Everyone 
+
+
+Issuer: Yale University 
+
+
+ISYWSC 24 Runner ups Electro masters 
+
+
+Issued: December 2024 
+
+
+Skills: Project Management, Electrical Equipment, Electrical Engineering, Electronics 
+
+
+Head outreach sports week 
+
+
+Issuer: PIEAS SPORTICS SOCIETY 
+
+
+Issued: November 2024 
+
+
+Skills: Project Management, Logistics Management 
+
+
+Career Essentials in GitHub Professional Certificate 
+
+
+Issuer: GitHub 
+
+
+Issued: September 2024 
+
+
+Skills: GitHub 
+
+
+Practical GitHub Actions 
+
+
+Issuer: LinkedIn 
+
+
+Issued: 2024 
+
+
+Skills: GitHub 
+
+
+
+Practical GitHub Code Search 
+
+
+Issuer: LinkedIn 
+
+
+Issued: 2024 
+
+
+Skills: GitHub 
+
+
+Practical GitHub Copilot 
+
+
+Issuer: LinkedIn 
+
+
+Issued: 2024 
+
+
+Skills: GitHub Copilot 
+
+
+Practical GitHub Project Management and Collaboration 
+
+
+Issuer: LinkedIn 
+
+
+Issued: September 2024 
+
+
+Skills: Project Management, GitHub 
+
+
+Deep Learning: Getting Started 
+
+Issuer: LinkedIn
+
+
+Issued: August 2024 
+
+
+Skills: Deep Learning, Machine Learning 
+
+
+Electrical Systems: Panel Boards, Frequency Drives, and Transformers 
+
+
+Issuer: LinkedIn 
+
+
+Issued: August 2024 
+
+
+Skills: Electrical Equipment 
+
+
+Introduction to Deep Learning with OpenCV 
+
+
+Issuer: LinkedIn 
+
+
+Issued: August 2024 
+
+
+Skills: OpenCV 
+
+
+Introduction to Large Language Models 
+
+
+Issuer: LinkedIn 
+
+
+Issued: August 2024 
+
+
+Skills: Large Language Models (LLM) 
+
+
+Learning FPGA Development 
+
+
+Issuer: LinkedIn 
+
+
+Issued: August 2024 
+
+
+Skills: Field-Programmable Gate Arrays (FPGA) 
+
+
+CS50x 
+
+
+Skills: C (Programming Language), Bootstrap (Framework), Python (Programming Language), Front-End Development, Git, GitHub, SQL, Cascading Style Sheets (CSS) 

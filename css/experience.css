@@ -1,0 +1,691 @@
+/* ================================================
+   EXPERIENCE PAGE - LOGIC ANALYZER STYLES
+   ================================================ */
+
+/* Import shared navigation styles from about.css */
+.electrical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 25, 47, 0.95);
+  border-bottom: 2px solid var(--accent-teal);
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-button {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-white);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-title {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-teal);
+  text-shadow: 0 0 10px var(--accent-teal);
+}
+
+.power-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.power-led {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease;
+}
+
+.power-led.active {
+  background: var(--accent-green);
+  box-shadow: 0 0 15px var(--accent-green);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Main Container */
+.experience-container {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 120px 30px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ================================================
+   LOGIC ANALYZER TIMELINE
+   ================================================ */
+.analyzer-container {
+  background: #0a0a0a;
+  border-radius: 15px;
+  box-shadow: 
+    0 0 30px rgba(100, 255, 218, 0.3),
+    inset 0 0 25px rgba(0, 0, 0, 0.9);
+  border: 3px solid #1f2937;
+  overflow: hidden;
+}
+
+.analyzer-header {
+  background: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #333;
+}
+
+.analyzer-title {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--circuit-gold);
+  text-shadow: 0 0 8px var(--circuit-gold);
+}
+
+.analyzer-controls {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.time-scale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.scale-indicator {
+  width: 40px;
+  height: 8px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-green));
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.trigger-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.trigger-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  transition: all 0.5s ease;
+}
+
+.trigger-led.active {
+  background: var(--warning-orange);
+  box-shadow: 0 0 12px var(--warning-orange);
+  animation: trigger-blink 1s ease-in-out infinite;
+}
+
+.analyzer-screen {
+  background: #000;
+  padding: 20px;
+  position: relative;
+  min-height: 300px;
+}
+
+.timeline-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 255, 218, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Timeline Channels */
+.timeline-channel {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  position: relative;
+  height: 40px;
+}
+
+.channel-label {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-white);
+  width: 60px;
+  text-align: center;
+  background: #1a1a1a;
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  margin-right: 15px;
+}
+
+.signal-trace {
+  flex: 1;
+  height: 20px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Signal Pulses */
+.signal-pulse {
+  position: absolute;
+  height: 100%;
+  background: var(--accent-teal);
+  border-radius: 2px;
+  top: 0;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.signal-pulse:hover {
+  opacity: 1;
+  transform: scaleY(1.2);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.8);
+}
+
+.signal-pulse.ongoing {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  animation: pulse-ongoing 2s ease-in-out infinite;
+}
+
+.signal-pulse.active::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--text-white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border: 1px solid var(--accent-teal);
+  z-index: 10;
+}
+
+.signal-pulse:hover::after {
+  opacity: 1;
+}
+
+/* Signal Bursts (for projects) */
+.signal-burst {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: var(--circuit-gold);
+  top: 0;
+  animation: burst-glow 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.signal-burst:hover {
+  width: 6px;
+  box-shadow: 0 0 15px var(--circuit-gold);
+}
+
+.signal-burst::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--circuit-gold);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border: 1px solid var(--circuit-gold);
+  z-index: 10;
+}
+
+.signal-burst:hover::after {
+  opacity: 1;
+}
+
+/* Skill Signals */
+.skill-signal {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--accent-green) calc(var(--intensity) * 100%), 
+    rgba(0, 255, 136, 0.3) 100%);
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  animation: skill-flow 3s ease-in-out infinite;
+}
+
+.skill-signal::before {
+  content: attr(data-skill);
+  position: absolute;
+  right: 10px;
+  top: -15px;
+  font-family: 'Courier New', monospace;
+  font-size: 8px;
+  color: var(--accent-green);
+  opacity: 0.8;
+}
+
+/* Time Markers */
+.time-markers {
+  position: absolute;
+  bottom: 10px;
+  left: 75px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-marker {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+  padding: 5px 10px;
+  background: rgba(26, 26, 26, 0.8);
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.time-marker.current {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* ================================================
+   EXPERIENCE DETAILS PANEL
+   ================================================ */
+.details-panel {
+  background: rgba(17, 34, 64, 0.8);
+  border-radius: 15px;
+  border: 2px solid var(--accent-teal);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
+  overflow: hidden;
+}
+
+.panel-header {
+  background: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #333;
+}
+
+.panel-title {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--accent-teal);
+}
+
+.panel-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  transition: all 0.5s ease;
+}
+
+.status-indicator.active {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
+.experience-cards {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.experience-card:hover {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+  transform: translateY(-2px);
+}
+
+.experience-card.active {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.company-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a1a1a;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-teal);
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--accent-teal);
+}
+
+.chip-led {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+  animation: chip-blink 2s ease-in-out infinite;
+}
+
+.duration {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.card-content h3 {
+  color: var(--text-white);
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+.location {
+  color: var(--text-gray);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--text-white);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background: rgba(100, 255, 218, 0.1);
+  color: var(--accent-teal);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-family: 'Courier New', monospace;
+  border: 1px solid var(--accent-teal);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(100, 255, 218, 0.2);
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+/* ================================================
+   ACHIEVEMENTS PANEL
+   ================================================ */
+.achievements-panel {
+  background: rgba(26, 26, 26, 0.8);
+  border-radius: 15px;
+  border: 2px solid var(--circuit-gold);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+}
+
+.achievements-panel .panel-header {
+  border-color: var(--circuit-gold);
+}
+
+.cert-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+}
+
+.counter-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--circuit-gold);
+  text-shadow: 0 0 10px var(--circuit-gold);
+}
+
+.counter-label {
+  font-size: 10px;
+  color: var(--text-gray);
+}
+
+.achievements-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.achievement-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #333;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.achievement-card:hover {
+  border-color: var(--circuit-gold);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.achievement-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.achievement-title {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-white);
+  margin-bottom: 5px;
+}
+
+.achievement-subtitle {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: var(--text-gray);
+}
+
+/* Navigation Panel */
+.nav-panel {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.nav-arduino-btn {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-white);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding: 15px 25px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-arduino-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-arduino-btn .button-led {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff0000;
+  box-shadow: 0 0 5px #ff0000;
+  transition: all 0.3s ease;
+}
+
+.nav-arduino-btn:hover .button-led {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 15px var(--accent-green); }
+  50% { box-shadow: 0 0 25px var(--accent-green); }
+}
+
+@keyframes trigger-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes pulse-ongoing {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+@keyframes burst-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--circuit-gold); }
+  50% { box-shadow: 0 0 15px var(--circuit-gold); }
+}
+
+@keyframes skill-flow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: translateY(-50%) scaleY(1.2); }
+}
+
+@keyframes chip-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 120px 15px 30px;
+  }
+  
+  .analyzer-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .analyzer-controls {
+    gap: 15px;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .nav-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+}

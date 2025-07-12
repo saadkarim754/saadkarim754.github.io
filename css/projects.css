@@ -1,0 +1,646 @@
+/* ================================================
+   PROJECTS PAGE - PCB BOARD STYLES
+   ================================================ */
+
+/* Shared navigation styles */
+.electrical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 25, 47, 0.95);
+  border-bottom: 2px solid var(--accent-teal);
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-button {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-white);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-title {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--accent-teal);
+  text-shadow: 0 0 10px var(--accent-teal);
+}
+
+.power-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.power-led {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #333;
+  transition: all 0.5s ease;
+}
+
+.power-led.active {
+  background: var(--accent-green);
+  box-shadow: 0 0 15px var(--accent-green);
+  animation: power-pulse 2s ease-in-out infinite;
+}
+
+/* Main Container */
+.projects-container {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 30px;
+  padding: 120px 30px 30px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ================================================
+   PROJECT CONTROL PANEL
+   ================================================ */
+.project-control-panel {
+  grid-column: 1 / -1;
+  background: rgba(17, 34, 64, 0.8);
+  border-radius: 15px;
+  border: 2px solid var(--accent-teal);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
+  overflow: hidden;
+}
+
+.panel-header {
+  background: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #333;
+}
+
+.panel-title {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--accent-teal);
+}
+
+.project-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+}
+
+.counter-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--circuit-gold);
+  text-shadow: 0 0 10px var(--circuit-gold);
+}
+
+.counter-label {
+  font-size: 10px;
+  color: var(--text-gray);
+}
+
+.category-filters {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: none;
+  border-radius: 25px;
+  color: var(--text-white);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #333;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-teal);
+}
+
+.filter-btn.active {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  background: linear-gradient(145deg, #1a4a1a, #0a2a0a);
+}
+
+.filter-led {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff0000;
+  box-shadow: 0 0 5px #ff0000;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active .filter-led {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
+/* ================================================
+   PCB BOARD
+   ================================================ */
+.pcb-board {
+  grid-column: 1 / -1;
+  background: #0d4a0d;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #1a5a1a 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, #1a5a1a 0%, transparent 50%),
+    linear-gradient(45deg, #0a3a0a 25%, transparent 25%),
+    linear-gradient(-45deg, #0a3a0a 25%, transparent 25%);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  min-height: 600px;
+  border: 4px solid #2a6a2a;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 136, 0.2),
+    inset 0 0 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  align-content: start;
+}
+
+.board-traces {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(100, 255, 218, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(100, 255, 218, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* ================================================
+   PROJECT ICs (INTEGRATED CIRCUITS)
+   ================================================ */
+.project-ic {
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 3px solid #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.project-ic:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-teal);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(100, 255, 218, 0.4);
+}
+
+.project-ic.active {
+  border-color: var(--accent-green);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+.project-ic.large {
+  min-height: 200px;
+}
+
+.project-ic.medium {
+  min-height: 160px;
+}
+
+.ic-body {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  padding: 15px;
+  position: relative;
+}
+
+.ic-label {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-white);
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px var(--text-white);
+}
+
+.ic-pins {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.pin {
+  width: 8px;
+  height: 20px;
+  background: #666;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pin.active {
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+}
+
+.pin::after {
+  content: attr(data-tech);
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  font-family: 'Courier New', monospace;
+  font-size: 8px;
+  color: var(--text-gray);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pin:hover::after {
+  opacity: 1;
+}
+
+.status-led {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  transition: all 0.5s ease;
+}
+
+.status-led.active {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+  animation: status-blink 2s ease-in-out infinite;
+}
+
+.ic-details {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.ic-details h3 {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.ic-details p {
+  font-size: 12px;
+  color: var(--text-gray);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.link-btn {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid;
+}
+
+.link-btn.live {
+  background: rgba(0, 255, 136, 0.1);
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.link-btn.github {
+  background: rgba(100, 255, 218, 0.1);
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+}
+
+.link-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* ================================================
+   SMD COMPONENTS (SMALL PROJECTS)
+   ================================================ */
+.project-smd {
+  width: 60px;
+  height: 40px;
+  background: #2a2a2a;
+  border-radius: 5px;
+  border: 2px solid #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+}
+
+.project-smd:hover {
+  transform: scale(1.1);
+  border-color: var(--circuit-gold);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.smd-body {
+  padding: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.smd-label {
+  font-family: 'Courier New', monospace;
+  font-size: 8px;
+  font-weight: bold;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.smd-tooltip {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--text-white);
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border: 1px solid var(--circuit-gold);
+  z-index: 10;
+}
+
+.project-smd:hover .smd-tooltip {
+  opacity: 1;
+}
+
+/* ================================================
+   CONNECTION TRACES
+   ================================================ */
+.connection-traces {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.trace {
+  stroke-dasharray: 5, 5;
+  animation: trace-flow 3s linear infinite;
+}
+
+.trace-node {
+  animation: node-glow 2s ease-in-out infinite;
+}
+
+/* ================================================
+   PROJECT TERMINAL
+   ================================================ */
+.project-terminal {
+  grid-column: 1 / -1;
+  background: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: 
+    0 0 25px rgba(0, 255, 136, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.9);
+  border: 2px solid #1a4a1a;
+  overflow: hidden;
+  max-height: 300px;
+}
+
+.terminal-header {
+  background: #1a1a1a;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.term-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.term-btn.close { background: #ff5f56; }
+.term-btn.minimize { background: #ffbd2e; }
+.term-btn.maximize { background: #27ca3f; }
+
+.terminal-title {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.terminal-content {
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.json-output {
+  color: var(--text-white);
+}
+
+.json-line {
+  margin: 2px 0;
+}
+
+.indent1 { margin-left: 20px; }
+.indent2 { margin-left: 40px; }
+
+.terminal-cursor {
+  color: var(--accent-green);
+  animation: cursor-blink 1s step-end infinite;
+  margin-top: 10px;
+}
+
+/* Navigation Panel */
+.nav-panel {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.nav-arduino-btn {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-white);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding: 15px 25px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-arduino-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-arduino-btn .button-led {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff0000;
+  box-shadow: 0 0 5px #ff0000;
+  transition: all 0.3s ease;
+}
+
+.nav-arduino-btn:hover .button-led {
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
+/* Animations */
+@keyframes power-pulse {
+  0%, 100% { box-shadow: 0 0 15px var(--accent-green); }
+  50% { box-shadow: 0 0 25px var(--accent-green); }
+}
+
+@keyframes status-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes trace-flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 10; }
+}
+
+@keyframes node-glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .pcb-board {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 120px 15px 30px;
+  }
+  
+  .category-filters {
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+  
+  .pcb-board {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+}

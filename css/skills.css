@@ -1,0 +1,45 @@
+/* Skills Page - Breadboard Layout */
+.electrical-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 25, 47, 0.95); border-bottom: 2px solid var(--accent-teal); backdrop-filter: blur(10px); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; max-width: 1400px; margin: 0 auto; }
+.nav-button { background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; border-radius: 8px; color: var(--text-white); font-family: 'Courier New', monospace; font-weight: bold; padding: 10px 20px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+.nav-button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
+.nav-title { font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; color: var(--accent-teal); text-shadow: 0 0 10px var(--accent-teal); }
+.power-indicator { display: flex; align-items: center; gap: 8px; font-family: 'Courier New', monospace; font-size: 12px; color: var(--text-gray); }
+.power-led { width: 12px; height: 12px; border-radius: 50%; background: #333; transition: all 0.5s ease; }
+.power-led.active { background: var(--accent-green); box-shadow: 0 0 15px var(--accent-green); animation: power-pulse 2s ease-in-out infinite; }
+
+.skills-container { padding: 120px 30px 30px; max-width: 1400px; margin: 0 auto; }
+.breadboard-container { background: #2d4a2d; border-radius: 15px; border: 4px solid #4a6a4a; box-shadow: 0 0 30px rgba(0, 255, 136, 0.2); overflow: hidden; }
+.breadboard-header { background: #1a1a1a; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; }
+.breadboard-title { font-family: 'Courier New', monospace; font-size: 16px; font-weight: bold; color: var(--accent-green); }
+.voltage-indicator { display: flex; align-items: center; gap: 8px; font-family: 'Courier New', monospace; font-size: 12px; color: var(--text-gray); }
+.voltage-led { width: 10px; height: 10px; border-radius: 50%; background: var(--warning-orange); box-shadow: 0 0 10px var(--warning-orange); }
+
+.breadboard { padding: 30px; background: repeating-linear-gradient(90deg, #0d2a0d 0px, #0d2a0d 30px, #1a3a1a 30px, #1a3a1a 32px); }
+.component-section { margin: 30px 0; }
+.section-label { font-family: 'Courier New', monospace; font-size: 14px; font-weight: bold; color: var(--circuit-gold); margin-bottom: 15px; text-align: center; }
+.component-row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; }
+
+.skill-component { background: #1a1a1a; border-radius: 8px; border: 2px solid #333; cursor: pointer; transition: all 0.3s ease; position: relative; }
+.skill-component:hover { border-color: var(--accent-teal); box-shadow: 0 0 15px rgba(100, 255, 218, 0.3); transform: translateY(-2px); }
+.skill-component.large { width: 120px; height: 80px; }
+.skill-component.medium { width: 100px; height: 70px; }
+.skill-component.small { width: 80px; height: 60px; }
+
+.component-body { padding: 10px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.component-pins { display: flex; justify-content: space-around; margin-bottom: 5px; }
+.pin { width: 4px; height: 8px; background: #666; border-radius: 1px; transition: all 0.3s ease; }
+.pin.active { background: var(--accent-green); box-shadow: 0 0 5px var(--accent-green); }
+
+.skill-label { font-family: 'Courier New', monospace; font-size: 10px; font-weight: bold; color: var(--text-white); text-align: center; margin: 5px 0; }
+.skill-meter { width: 100%; height: 4px; background: #333; border-radius: 2px; overflow: hidden; }
+.meter-fill { height: 100%; background: linear-gradient(90deg, var(--accent-green), var(--accent-teal)); transition: width 2s ease-out; border-radius: 2px; }
+
+.nav-panel { display: flex; justify-content: center; gap: 30px; margin-top: 30px; }
+.nav-arduino-btn { background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; border-radius: 8px; color: var(--text-white); font-family: 'Courier New', monospace; font-weight: bold; padding: 15px 25px; cursor: pointer; position: relative; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+.nav-arduino-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
+.nav-arduino-btn .button-led { position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; border-radius: 50%; background: #ff0000; box-shadow: 0 0 5px #ff0000; transition: all 0.3s ease; }
+.nav-arduino-btn:hover .button-led { background: var(--accent-green); box-shadow: 0 0 10px var(--accent-green); }
+
+@keyframes power-pulse { 0%, 100% { box-shadow: 0 0 15px var(--accent-green); } 50% { box-shadow: 0 0 25px var(--accent-green); } }
+@media (max-width: 768px) { .skills-container { padding: 120px 15px 30px; } .component-row { justify-content: center; } .nav-panel { flex-direction: column; align-items: center; } }

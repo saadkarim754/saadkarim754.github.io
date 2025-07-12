@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Mian Saad Karim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="icon" href="title.png" type="image/png">
+</head>
+<body>
+    <!-- Binary Rain Background -->
+    <div class="binary-rain"></div>
+    
+    <!-- Circuit Board Background -->
+    <div class="circuit-background"></div>
+    
+    <!-- Navigation Header -->
+    <nav class="electrical-nav">
+        <div class="nav-container">
+            <button class="nav-button home-btn" onclick="window.location.href='index.html'">
+                <div class="button-led"></div>
+                HOME
+            </button>
+            <div class="nav-title">EXPERIENCE ANALYZER</div>
+            <div class="power-indicator">
+                <div class="power-led active"></div>
+                <span>ANALYZING</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="experience-container">
+        <!-- Logic Analyzer Timeline -->
+        <div class="analyzer-container">
+            <div class="analyzer-header">
+                <div class="analyzer-title">CAREER TIMELINE ANALYZER</div>
+                <div class="analyzer-controls">
+                    <div class="time-scale">
+                        <span>Time Scale: 1 Year/Div</span>
+                        <div class="scale-indicator"></div>
+                    </div>
+                    <div class="trigger-status">
+                        <div class="trigger-led active"></div>
+                        <span>TRIGGERED</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="analyzer-screen">
+                <div class="timeline-grid"></div>
+                
+                <!-- Timeline Channels -->
+                <div class="timeline-channel" data-channel="education">
+                    <div class="channel-label">EDU</div>
+                    <div class="signal-trace">
+                        <div class="signal-pulse active" data-start="2018" data-end="2020" data-info="Matriculation - Computer Science - 93%"></div>
+                        <div class="signal-pulse active" data-start="2020" data-end="2022" data-info="High School - Computer Engineering - 91%"></div>
+                        <div class="signal-pulse active ongoing" data-start="2022" data-end="2026" data-info="BS Electrical & Electronics Engineering - PIEAS"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-channel" data-channel="experience">
+                    <div class="channel-label">EXP</div>
+                    <div class="signal-trace">
+                        <div class="signal-pulse active" data-start="2024" data-end="2024" data-info="Intern - PAC Kamra - Avionics & FPGA"></div>
+                        <div class="signal-pulse active ongoing" data-start="2024" data-end="2025" data-info="IT Manager - PIEAS Sportics Society"></div>
+                        <div class="signal-pulse active ongoing" data-start="2025" data-end="2025" data-info="Intern - NASTP - UAV Simulations"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-channel" data-channel="projects">
+                    <div class="channel-label">PROJ</div>
+                    <div class="signal-trace">
+                        <div class="signal-burst" data-start="2024" data-info="QR Attendance System"></div>
+                        <div class="signal-burst" data-start="2024" data-info="PIEAS Sportics Web"></div>
+                        <div class="signal-burst" data-start="2025" data-info="6 DOF Robot Design"></div>
+                        <div class="signal-burst" data-start="2024" data-info="News Classification ML"></div>
+                        <div class="signal-burst" data-start="2024" data-info="Biometric Access System"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline-channel" data-channel="skills">
+                    <div class="channel-label">TECH</div>
+                    <div class="signal-trace">
+                        <div class="skill-signal" data-skill="Python" style="--intensity: 0.9;"></div>
+                        <div class="skill-signal" data-skill="FPGA" style="--intensity: 0.8;"></div>
+                        <div class="skill-signal" data-skill="Web Dev" style="--intensity: 0.85;"></div>
+                        <div class="skill-signal" data-skill="IoT" style="--intensity: 0.75;"></div>
+                    </div>
+                </div>
+                
+                <!-- Time markers -->
+                <div class="time-markers">
+                    <div class="time-marker" data-year="2018">2018</div>
+                    <div class="time-marker" data-year="2020">2020</div>
+                    <div class="time-marker" data-year="2022">2022</div>
+                    <div class="time-marker" data-year="2024">2024</div>
+                    <div class="time-marker current" data-year="2025">2025</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Experience Details Panel -->
+        <div class="details-panel">
+            <div class="panel-header">
+                <div class="panel-title">EXPERIENCE DETAILS</div>
+                <div class="panel-status">
+                    <div class="status-indicator active"></div>
+                    <span>READY</span>
+                </div>
+            </div>
+            
+            <div class="experience-cards">
+                <!-- NASTP Internship -->
+                <div class="experience-card active" data-company="nastp">
+                    <div class="card-header">
+                        <div class="company-chip">
+                            <div class="chip-led"></div>
+                            <span>NASTP</span>
+                        </div>
+                        <div class="duration">Jul 2025 - Present</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Intern - National Aerospace Science & Technology Park</h3>
+                        <div class="location">📍 Islamabad, Pakistan</div>
+                        <div class="description">
+                            Working on simulations of Robots and drones in sandbox environments.
+                            Exploring UAV technology and aerospace applications.
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Robotics</span>
+                            <span class="tech-tag">UAV Simulation</span>
+                            <span class="tech-tag">Aerospace</span>
+                            <span class="tech-tag">Drones</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PIEAS Sportics Society -->
+                <div class="experience-card" data-company="pieas">
+                    <div class="card-header">
+                        <div class="company-chip">
+                            <div class="chip-led"></div>
+                            <span>PIEAS</span>
+                        </div>
+                        <div class="duration">2024 - Present</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>IT Manager - PIEAS Sportics Society</h3>
+                        <div class="location">📍 Islamabad, Pakistan</div>
+                        <div class="description">
+                            Built the website and managed all social media channels, keeping 
+                            the community connected and engaged. Leading digital transformation initiatives.
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">GitHub</span>
+                            <span class="tech-tag">Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PAC Kamra Internship -->
+                <div class="experience-card" data-company="pac">
+                    <div class="card-header">
+                        <div class="company-chip">
+                            <div class="chip-led"></div>
+                            <span>PAC</span>
+                        </div>
+                        <div class="duration">Jul 2024</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Internee - Pakistan Aeronautical Complex Kamra</h3>
+                        <div class="location">📍 Kamra, Pakistan</div>
+                        <div class="description">
+                            Gained hands-on experience in avionics production and testing, 
+                            including working with RF testers and visiting The Aircraft Manufacturing Factory.
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Avionics</span>
+                            <span class="tech-tag">RF Testing</span>
+                            <span class="tech-tag">C Programming</span>
+                            <span class="tech-tag">Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Achievements Panel -->
+        <div class="achievements-panel">
+            <div class="panel-header">
+                <div class="panel-title">CERTIFICATIONS & ACHIEVEMENTS</div>
+                <div class="cert-counter">
+                    <span class="counter-value">8</span>
+                    <span class="counter-label">CERTS</span>
+                </div>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-title">ISYWSC 24 Runner ups</div>
+                    <div class="achievement-subtitle">Electro Masters</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">🚀</div>
+                    <div class="achievement-title">Rocket Science for Everyone</div>
+                    <div class="achievement-subtitle">Yale University</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">⚙️</div>
+                    <div class="achievement-title">Parametric CAD</div>
+                    <div class="achievement-subtitle">Onshape by PTC</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">👨‍💼</div>
+                    <div class="achievement-title">Head Outreach</div>
+                    <div class="achievement-subtitle">Sports Week</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">💻</div>
+                    <div class="achievement-title">GitHub Professional</div>
+                    <div class="achievement-subtitle">Certificate</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">🤖</div>
+                    <div class="achievement-title">GitHub Copilot</div>
+                    <div class="achievement-subtitle">Practical Course</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Panel -->
+        <div class="nav-panel">
+            <button class="nav-arduino-btn" onclick="window.location.href='about.html'">
+                <div class="button-led"></div>
+                PREV: ABOUT
+            </button>
+            <button class="nav-arduino-btn" onclick="window.location.href='projects.html'">
+                <div class="button-led"></div>
+                NEXT: PROJECTS
+            </button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/experience.js"></script>
+</body>
+</html>

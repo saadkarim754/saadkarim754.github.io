@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mian Saad Karim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="title.png" type="image/png">
+</head>
+<body>
+    <!-- Binary Rain Background -->
+    <div class="binary-rain"></div>
+    
+    <!-- Circuit Board Background -->
+    <div class="circuit-background"></div>
+    
+    <!-- Navigation Header -->
+    <nav class="electrical-nav">
+        <div class="nav-container">
+            <button class="nav-button home-btn" onclick="window.location.href='index.html'">
+                <div class="button-led"></div>
+                HOME
+            </button>
+            <div class="nav-title">COMMUNICATION TERMINAL</div>
+            <div class="power-indicator">
+                <div class="power-led active"></div>
+                <span>ONLINE</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="contact-container">
+        <!-- Terminal Interface -->
+        <div class="contact-terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="term-btn close"></div>
+                    <div class="term-btn minimize"></div>
+                    <div class="term-btn maximize"></div>
+                </div>
+                <div class="terminal-title">contact_interface.sh</div>
+                <div class="connection-status">
+                    <div class="status-led active"></div>
+                    <span>CONNECTED</span>
+                </div>
+            </div>
+            
+            <div class="terminal-content">
+                <div class="terminal-output">
+                    <div class="output-line">
+                        <span class="prompt">saad@communication:~$</span>
+                        <span class="command">./contact_info.sh</span>
+                    </div>
+                    <div class="output-line">Initializing communication channels...</div>
+                    <div class="output-line">✓ Email interface: READY</div>
+                    <div class="output-line">✓ LinkedIn connection: ACTIVE</div>
+                    <div class="output-line">✓ GitHub repository: ONLINE</div>
+                    <div class="output-line">✓ Location services: AVAILABLE</div>
+                    <div class="output-line blank"></div>
+                    <div class="output-line">================================</div>
+                    <div class="output-line">    CONTACT INFORMATION SYSTEM</div>
+                    <div class="output-line">================================</div>
+                    <div class="output-line blank"></div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-section">
+                        <div class="section-header">📧 PRIMARY COMMUNICATION</div>
+                        <div class="contact-item">
+                            <span class="label">EMAIL:</span>
+                            <span class="value">saadkarim754@gmail.com</span>
+                            <button class="action-btn" onclick="window.open('mailto:saadkarim754@gmail.com')">
+                                <div class="btn-led"></div>
+                                SEND
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <div class="section-header">🌐 PROFESSIONAL NETWORKS</div>
+                        <div class="contact-item">
+                            <span class="label">LINKEDIN:</span>
+                            <span class="value">mian-saad-karim</span>
+                            <button class="action-btn" onclick="window.open('https://www.linkedin.com/in/mian-saad-karim/', '_blank')">
+                                <div class="btn-led"></div>
+                                CONNECT
+                            </button>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">GITHUB:</span>
+                            <span class="value">saadkarim754</span>
+                            <button class="action-btn" onclick="window.open('https://github.com/saadkarim754', '_blank')">
+                                <div class="btn-led"></div>
+                                VISIT
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <div class="section-header">📍 LOCATION & AVAILABILITY</div>
+                        <div class="contact-item">
+                            <span class="label">LOCATION:</span>
+                            <span class="value">Islamabad, Pakistan</span>
+                            <div class="status-indicator active">AVAILABLE</div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="label">TIMEZONE:</span>
+                            <span class="value">PKT (UTC+5)</span>
+                            <div class="time-display" id="currentTime">--:--:--</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="terminal-footer">
+                    <div class="output-line blank"></div>
+                    <div class="output-line">📋 COLLABORATION INTERESTS:</div>
+                    <div class="output-line">  • Electrical Engineering Projects</div>
+                    <div class="output-line">  • IoT & Embedded Systems</div>
+                    <div class="output-line">  • FPGA Development</div>
+                    <div class="output-line">  • Web Applications</div>
+                    <div class="output-line">  • Open Source Contributions</div>
+                    <div class="output-line blank"></div>
+                    <div class="output-line">
+                        <span class="prompt">saad@communication:~$</span>
+                        <span class="cursor-blink">█</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Connection Status Panel -->
+        <div class="connection-panel">
+            <div class="panel-header">
+                <div class="panel-title">CONNECTION STATUS</div>
+            </div>
+            
+            <div class="connection-grid">
+                <div class="connection-item">
+                    <div class="connection-icon">📧</div>
+                    <div class="connection-info">
+                        <div class="connection-name">Email</div>
+                        <div class="connection-status active">ONLINE</div>
+                    </div>
+                    <div class="signal-strength">
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                    </div>
+                </div>
+                
+                <div class="connection-item">
+                    <div class="connection-icon">💼</div>
+                    <div class="connection-info">
+                        <div class="connection-name">LinkedIn</div>
+                        <div class="connection-status active">CONNECTED</div>
+                    </div>
+                    <div class="signal-strength">
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar"></div>
+                    </div>
+                </div>
+                
+                <div class="connection-item">
+                    <div class="connection-icon">🔧</div>
+                    <div class="connection-info">
+                        <div class="connection-name">GitHub</div>
+                        <div class="connection-status active">ACTIVE</div>
+                    </div>
+                    <div class="signal-strength">
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                        <div class="signal-bar active"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Panel -->
+        <div class="nav-panel">
+            <button class="nav-arduino-btn" onclick="window.location.href='skills.html'">
+                <div class="button-led"></div>
+                PREV: SKILLS
+            </button>
+            <button class="nav-arduino-btn" onclick="window.location.href='index.html'">
+                <div class="button-led"></div>
+                BACK TO HOME
+            </button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mian Saad Karim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="icon" href="title.png" type="image/png">
+</head>
+<body>
+    <!-- Binary Rain Background -->
+    <div class="binary-rain"></div>
+    
+    <!-- Circuit Board Background -->
+    <div class="circuit-background"></div>
+    
+    <!-- Navigation Header -->
+    <nav class="electrical-nav">
+        <div class="nav-container">
+            <button class="nav-button home-btn" onclick="window.location.href='index.html'">
+                <div class="button-led"></div>
+                HOME
+            </button>
+            <div class="nav-title">ABOUT MODULE</div>
+            <div class="power-indicator">
+                <div class="power-led active"></div>
+                <span>ONLINE</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="about-container">
+        <!-- Digital Multimeter Display -->
+        <div class="multimeter-container">
+            <div class="multimeter-display">
+                <div class="meter-screen">
+                    <div class="display-line title">PERSONAL STATS</div>
+                    <div class="display-line metric">
+                        <span class="label">AGE:</span>
+                        <span class="value animated-number" data-target="22">00</span>
+                        <span class="unit">YEARS</span>
+                    </div>
+                    <div class="display-line metric">
+                        <span class="label">PROJECTS:</span>
+                        <span class="value animated-number" data-target="15">00</span>
+                        <span class="unit">COMPLETED</span>
+                    </div>
+                    <div class="display-line metric">
+                        <span class="label">EXPERIENCE:</span>
+                        <span class="value animated-number" data-target="3">0</span>
+                        <span class="unit">YEARS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="meter-controls">
+                <div class="control-knob"></div>
+                <div class="control-knob"></div>
+                <div class="control-switch active"></div>
+            </div>
+        </div>
+        
+        <!-- Oscilloscope Visualization -->
+        <div class="oscilloscope-container">
+            <div class="scope-screen">
+                <div class="grid-overlay"></div>
+                <svg class="waveform" viewBox="0 0 400 200">
+                    <path class="wave passion" d="M0,100 Q100,50 200,100 T400,100" stroke="#00ff88" fill="none" stroke-width="2"/>
+                    <path class="wave skills" d="M0,120 Q100,80 200,120 T400,120" stroke="#64ffda" fill="none" stroke-width="2"/>
+                    <path class="wave growth" d="M0,80 Q100,40 200,80 T400,80" stroke="#ffd700" fill="none" stroke-width="2"/>
+                </svg>
+                <div class="scope-legend">
+                    <div class="legend-item">
+                        <div class="color-box passion"></div>
+                        <span>PASSION</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box skills"></div>
+                        <span>SKILLS</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box growth"></div>
+                        <span>GROWTH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Text Terminal -->
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="term-btn close"></div>
+                    <div class="term-btn minimize"></div>
+                    <div class="term-btn maximize"></div>
+                </div>
+                <div class="terminal-title">about_saad.txt</div>
+            </div>
+            <div class="terminal-content">
+                <div class="terminal-line">
+                    <span class="prompt">saad@pieas:~$</span>
+                    <span class="command">cat about_me.txt</span>
+                </div>
+                <div class="output-text">
+                    <div class="text-line">Hi, I'm Saad Karim, an Electrical & Electronics Engineering student at PIEAS.</div>
+                    <div class="text-line">Currently exploring the fascinating world of UAVs, robotics, and embedded systems.</div>
+                    <div class="text-line"></div>
+                    <div class="text-line">My journey in engineering started early, thanks to my father's background,</div>
+                    <div class="text-line">and has evolved into a passion for integrating software with hardware.</div>
+                    <div class="text-line"></div>
+                    <div class="text-line">Specializing in:</div>
+                    <div class="text-line">• STM32 microcontrollers & embedded programming</div>
+                    <div class="text-line">• FPGA development & digital signal processing</div>
+                    <div class="text-line">• IoT systems & wireless communication</div>
+                    <div class="text-line">• Web development & system integration</div>
+                    <div class="text-line"></div>
+                    <div class="text-line">When I'm not coding or building circuits, you'll find me contributing</div>
+                    <div class="text-line">to open-source projects or managing tech events at PIEAS.</div>
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">saad@pieas:~$</span>
+                    <span class="cursor-blink">█</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LED Status Indicators -->
+        <div class="status-grid">
+            <div class="status-indicator">
+                <div class="status-led-big active" data-status="student"></div>
+                <div class="status-label">STUDENT</div>
+            </div>
+            <div class="status-indicator">
+                <div class="status-led-big active" data-status="developer"></div>
+                <div class="status-label">DEVELOPER</div>
+            </div>
+            <div class="status-indicator">
+                <div class="status-led-big active" data-status="engineer"></div>
+                <div class="status-label">ENGINEER</div>
+            </div>
+            <div class="status-indicator">
+                <div class="status-led-big active" data-status="innovator"></div>
+                <div class="status-label">INNOVATOR</div>
+            </div>
+        </div>
+        
+        <!-- Navigation Panel -->
+        <div class="nav-panel">
+            <button class="nav-arduino-btn" onclick="window.location.href='experience.html'">
+                <div class="button-led"></div>
+                NEXT: EXPERIENCE
+            </button>
+            <button class="nav-arduino-btn" onclick="window.location.href='index.html'">
+                <div class="button-led"></div>
+                BACK TO HOME
+            </button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

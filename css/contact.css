@@ -1,0 +1,63 @@
+/* Contact Page - Terminal Interface */
+.electrical-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 25, 47, 0.95); border-bottom: 2px solid var(--accent-teal); backdrop-filter: blur(10px); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; max-width: 1400px; margin: 0 auto; }
+.nav-button { background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; border-radius: 8px; color: var(--text-white); font-family: 'Courier New', monospace; font-weight: bold; padding: 10px 20px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+.nav-button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
+.nav-title { font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; color: var(--accent-teal); text-shadow: 0 0 10px var(--accent-teal); }
+.power-indicator { display: flex; align-items: center; gap: 8px; font-family: 'Courier New', monospace; font-size: 12px; color: var(--text-gray); }
+.power-led { width: 12px; height: 12px; border-radius: 50%; background: #333; transition: all 0.5s ease; }
+.power-led.active { background: var(--accent-green); box-shadow: 0 0 15px var(--accent-green); animation: power-pulse 2s ease-in-out infinite; }
+
+.contact-container { padding: 120px 30px 30px; max-width: 1000px; margin: 0 auto; }
+.terminal-window { background: #1a1a1a; border-radius: 10px; border: 2px solid #333; box-shadow: 0 0 30px rgba(100, 255, 218, 0.2); overflow: hidden; }
+
+.terminal-header { background: #2a2a2a; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+.terminal-controls { display: flex; gap: 8px; }
+.control-button { width: 12px; height: 12px; border-radius: 50%; cursor: pointer; }
+.control-button.close { background: #ff5f57; }
+.control-button.minimize { background: #ffbd2e; }
+.control-button.maximize { background: #28ca42; }
+.terminal-title { font-family: 'Courier New', monospace; font-size: 12px; color: var(--text-gray); }
+.connection-status { display: flex; align-items: center; gap: 5px; font-family: 'Courier New', monospace; font-size: 11px; color: var(--text-gray); }
+.status-led { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); box-shadow: 0 0 8px var(--accent-green); animation: status-blink 2s ease-in-out infinite; }
+
+.terminal-body { padding: 20px; height: 500px; overflow-y: auto; font-family: 'Courier New', monospace; font-size: 14px; background: repeating-linear-gradient(0deg, transparent 0px, transparent 19px, rgba(100, 255, 218, 0.03) 19px, rgba(100, 255, 218, 0.03) 20px); }
+.terminal-line { margin: 8px 0; }
+.prompt { color: var(--accent-green); }
+.command { color: var(--accent-teal); }
+.output { color: var(--text-white); margin-left: 20px; }
+.error { color: var(--warning-orange); }
+.success { color: var(--accent-green); }
+
+.contact-info { margin: 20px 0; }
+.contact-item { display: flex; align-items: center; margin: 15px 0; padding: 10px; background: rgba(100, 255, 218, 0.05); border-left: 3px solid var(--accent-teal); border-radius: 0 5px 5px 0; }
+.contact-icon { font-size: 18px; color: var(--accent-teal); margin-right: 15px; width: 25px; text-align: center; }
+.contact-details h3 { color: var(--text-white); font-size: 14px; margin: 0 0 5px 0; font-weight: bold; }
+.contact-details p { color: var(--text-gray); font-size: 12px; margin: 0; }
+.contact-link { color: var(--accent-teal); text-decoration: none; transition: all 0.3s ease; }
+.contact-link:hover { color: var(--accent-green); text-shadow: 0 0 5px var(--accent-green); }
+
+.system-info { margin: 30px 0; padding: 15px; background: rgba(0, 0, 0, 0.3); border: 1px solid #333; border-radius: 5px; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.info-item { display: flex; justify-content: space-between; color: var(--text-gray); font-size: 12px; }
+.info-value { color: var(--accent-teal); }
+
+.cursor { display: inline-block; width: 10px; height: 14px; background: var(--accent-green); margin-left: 2px; animation: cursor-blink 1s step-end infinite; }
+@keyframes cursor-blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+@keyframes status-blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0.3; } }
+@keyframes power-pulse { 0%, 100% { box-shadow: 0 0 15px var(--accent-green); } 50% { box-shadow: 0 0 25px var(--accent-green); } }
+
+.nav-panel { display: flex; justify-content: center; gap: 30px; margin-top: 30px; }
+.nav-arduino-btn { background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; border-radius: 8px; color: var(--text-white); font-family: 'Courier New', monospace; font-weight: bold; padding: 15px 25px; cursor: pointer; position: relative; transition: all 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+.nav-arduino-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
+.nav-arduino-btn .button-led { position: absolute; top: 8px; right: 8px; width: 8px; height: 8px; border-radius: 50%; background: #ff0000; box-shadow: 0 0 5px #ff0000; transition: all 0.3s ease; }
+.nav-arduino-btn:hover .button-led { background: var(--accent-green); box-shadow: 0 0 10px var(--accent-green); }
+
+@media (max-width: 768px) {
+    .contact-container { padding: 120px 15px 30px; }
+    .terminal-body { padding: 15px; height: 400px; font-size: 13px; }
+    .contact-item { flex-direction: column; align-items: flex-start; text-align: left; }
+    .contact-icon { margin-bottom: 5px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .nav-panel { flex-direction: column; align-items: center; }
+}

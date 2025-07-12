@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mian Saad Karim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="icon" href="title.png" type="image/png">
+</head>
+<body>
+    <!-- Binary Rain Background -->
+    <div class="binary-rain"></div>
+    
+    <!-- Circuit Board Background -->
+    <div class="circuit-background"></div>
+    
+    <!-- Navigation Header -->
+    <nav class="electrical-nav">
+        <div class="nav-container">
+            <button class="nav-button home-btn" onclick="window.location.href='index.html'">
+                <div class="button-led"></div>
+                HOME
+            </button>
+            <div class="nav-title">PROJECT HUB</div>
+            <div class="power-indicator">
+                <div class="power-led active"></div>
+                <span>ACTIVE</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="projects-container">
+        <!-- Control Panel -->
+        <div class="project-control-panel">
+            <div class="panel-header">
+                <div class="panel-title">PROJECT CATEGORIES</div>
+                <div class="project-counter">
+                    <span class="counter-value">12</span>
+                    <span class="counter-label">PROJECTS</span>
+                </div>
+            </div>
+            
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">
+                    <div class="filter-led"></div>
+                    ALL
+                </button>
+                <button class="filter-btn" data-category="web">
+                    <div class="filter-led"></div>
+                    WEB
+                </button>
+                <button class="filter-btn" data-category="embedded">
+                    <div class="filter-led"></div>
+                    EMBEDDED
+                </button>
+                <button class="filter-btn" data-category="ml">
+                    <div class="filter-led"></div>
+                    ML/AI
+                </button>
+                <button class="filter-btn" data-category="robotics">
+                    <div class="filter-led"></div>
+                    ROBOTICS
+                </button>
+                <button class="filter-btn" data-category="fpga">
+                    <div class="filter-led"></div>
+                    FPGA
+                </button>
+            </div>
+        </div>
+        
+        <!-- PCB Project Board -->
+        <div class="pcb-board">
+            <div class="board-traces"></div>
+            
+            <!-- Major Projects (Large ICs) -->
+            <div class="project-ic large" data-category="web" data-project="qr-attendance">
+                <div class="ic-body">
+                    <div class="ic-label">QR-ATTENDANCE</div>
+                    <div class="ic-pins">
+                        <div class="pin active" data-tech="Python"></div>
+                        <div class="pin active" data-tech="Web"></div>
+                        <div class="pin active" data-tech="QR"></div>
+                        <div class="pin active" data-tech="Flask"></div>
+                    </div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="ic-details">
+                    <h3>QR-Based Attendance System</h3>
+                    <p>Streamlined web-based attendance tracking using QR codes</p>
+                    <div class="project-links">
+                        <a href="https://saadkarim754.pythonanywhere.com" target="_blank" class="link-btn live">LIVE</a>
+                        <a href="https://github.com/saadkarim754/QR-ATTENDANCE-SYSTEM" target="_blank" class="link-btn github">CODE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-ic large" data-category="web" data-project="pieas-sportics">
+                <div class="ic-body">
+                    <div class="ic-label">PIEAS-SPORTICS</div>
+                    <div class="ic-pins">
+                        <div class="pin active" data-tech="Flask"></div>
+                        <div class="pin active" data-tech="SQL"></div>
+                        <div class="pin active" data-tech="Bootstrap"></div>
+                        <div class="pin active" data-tech="CSS"></div>
+                    </div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="ic-details">
+                    <h3>PIEAS Sportics Web Application</h3>
+                    <p>Comprehensive web app for sports event management and user authentication</p>
+                    <div class="project-links">
+                        <a href="https://github.com/saadkarim754/PSS-New" target="_blank" class="link-btn github">CODE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-ic large" data-category="robotics" data-project="6dof-robot">
+                <div class="ic-body">
+                    <div class="ic-label">6DOF-ROBOT</div>
+                    <div class="ic-pins">
+                        <div class="pin active" data-tech="MATLAB"></div>
+                        <div class="pin active" data-tech="SOLIDWORKS"></div>
+                        <div class="pin active" data-tech="Onshape"></div>
+                        <div class="pin active" data-tech="CoppeliaSim"></div>
+                    </div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="ic-details">
+                    <h3>6 DOF Robotic Arm Design</h3>
+                    <p>Complete design and simulation of automated welding robot</p>
+                    <div class="project-links">
+                        <a href="https://github.com/saadkarim754/Onshape_To_robot" target="_blank" class="link-btn github">CODE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Medium Projects -->
+            <div class="project-ic medium" data-category="ml" data-project="news-classification">
+                <div class="ic-body">
+                    <div class="ic-label">ML-NEWS</div>
+                    <div class="ic-pins">
+                        <div class="pin active" data-tech="Python"></div>
+                        <div class="pin active" data-tech="ML"></div>
+                        <div class="pin active" data-tech="MATLAB"></div>
+                    </div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="ic-details">
+                    <h3>Fake News Classification</h3>
+                    <p>ML model using Gradient Boosting for news authenticity detection</p>
+                    <div class="project-links">
+                        <a href="https://github.com/saadkarim754/Fake_News_classification" target="_blank" class="link-btn github">CODE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-ic medium" data-category="embedded" data-project="biometric-access">
+                <div class="ic-body">
+                    <div class="ic-label">BIOMETRIC</div>
+                    <div class="ic-pins">
+                        <div class="pin active" data-tech="ESP32"></div>
+                        <div class="pin active" data-tech="IoT"></div>
+                        <div class="pin active" data-tech="Adafruit"></div>
+                    </div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="ic-details">
+                    <h3>Smart Biometric Access System</h3>
+                    <p>IoT-enabled fingerprint authentication with real-time logging</p>
+                    <div class="project-links">
+                        <a href="https://github.com/saadkarim754/Smart-Biometric-Access-System-with-IoT-Integration" target="_blank" class="link-btn github">CODE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-ic medium" data-category="fpga" data-project="fpga-servo">
+                <div class="ic-body">
+                    <div class="ic-label">FPGA-SERVO</div>
+                    <div class="ic-pins">
+                        <div class="pin active" data-tech="Verilog"></div>
+                        <div class="pin active" data-tech="FPGA"></div>
+                        <div class="pin active" data-tech="Python"></div>
+                    </div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="ic-details">
+                    <h3>FPGA Servo Control System</h3>
+                    <p>Real-time servo control with UART GUI interface</p>
+                    <div class="project-links">
+                        <a href="https://github.com/saadkarim754/FPGA_servo_control" target="_blank" class="link-btn github">CODE</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Small Projects (SMD Components) -->
+            <div class="project-smd" data-category="fpga" data-project="vga-game">
+                <div class="smd-body">
+                    <div class="smd-label">VGA</div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="smd-tooltip">VGA Graphics Game on FPGA</div>
+            </div>
+            
+            <div class="project-smd" data-category="embedded" data-project="spwm-inverter">
+                <div class="smd-body">
+                    <div class="smd-label">SPWM</div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="smd-tooltip">SPWM Inverter Simulation</div>
+            </div>
+            
+            <div class="project-smd" data-category="web" data-project="rock-paper">
+                <div class="smd-body">
+                    <div class="smd-label">GAME</div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="smd-tooltip">Rock-Paper-Scissors Game</div>
+            </div>
+            
+            <div class="project-smd" data-category="ml" data-project="desmos-math">
+                <div class="smd-body">
+                    <div class="smd-label">MATH</div>
+                    <div class="status-led active"></div>
+                </div>
+                <div class="smd-tooltip">Mathematical Visualizations</div>
+            </div>
+            
+            <!-- Connection Traces -->
+            <svg class="connection-traces" viewBox="0 0 1200 800">
+                <path class="trace" d="M100,200 Q300,100 500,200 T900,200" stroke="#64ffda" stroke-width="2" fill="none" opacity="0.6"/>
+                <path class="trace" d="M200,400 Q400,300 600,400 T1000,400" stroke="#00ff88" stroke-width="2" fill="none" opacity="0.6"/>
+                <path class="trace" d="M150,600 Q350,500 550,600 T950,600" stroke="#ffd700" stroke-width="2" fill="none" opacity="0.6"/>
+                <circle class="trace-node" cx="100" cy="200" r="3" fill="#64ffda"/>
+                <circle class="trace-node" cx="500" cy="200" r="3" fill="#64ffda"/>
+                <circle class="trace-node" cx="900" cy="200" r="3" fill="#64ffda"/>
+                <circle class="trace-node" cx="200" cy="400" r="3" fill="#00ff88"/>
+                <circle class="trace-node" cx="600" cy="400" r="3" fill="#00ff88"/>
+                <circle class="trace-node" cx="1000" cy="400" r="3" fill="#00ff88"/>
+            </svg>
+        </div>
+        
+        <!-- Project Details Terminal -->
+        <div class="project-terminal" id="projectTerminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <div class="term-btn close"></div>
+                    <div class="term-btn minimize"></div>
+                    <div class="term-btn maximize"></div>
+                </div>
+                <div class="terminal-title">project_details.json</div>
+            </div>
+            <div class="terminal-content">
+                <div class="json-output">
+                    <div class="json-line">{</div>
+                    <div class="json-line indent1">"project": "Select a project to view details",</div>
+                    <div class="json-line indent1">"status": "waiting",</div>
+                    <div class="json-line indent1">"technologies": [],</div>
+                    <div class="json-line indent1">"description": "Click on any project IC to see details"</div>
+                    <div class="json-line">}</div>
+                </div>
+                <div class="terminal-cursor">█</div>
+            </div>
+        </div>
+        
+        <!-- Navigation Panel -->
+        <div class="nav-panel">
+            <button class="nav-arduino-btn" onclick="window.location.href='experience.html'">
+                <div class="button-led"></div>
+                PREV: EXPERIENCE
+            </button>
+            <button class="nav-arduino-btn" onclick="window.location.href='skills.html'">
+                <div class="button-led"></div>
+                NEXT: SKILLS
+            </button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
