@@ -126,8 +126,9 @@
 
         <div class="flagship-card">
           <div class="flagship-gallery">
-            <div class="main-image-container">
+            <div class="main-image-container" id="flagshipImageWrap" title="Click to view high-resolution image">
               <img id="flagshipMainImg" src="assets/custom-fc-top.webp" alt="Assembled 4-Layer Dual-MCU PCB (Top View)" class="gallery-hero-img">
+              <span class="flagship-hint">Hover to zoom · Click to expand</span>
             </div>
             <div class="image-caption" id="flagshipCaption">Assembled 4-layer dual-MCU avionics PCB (Top View): STM32F405 ArduPilot flight controller + ESP32-S3 Edge AI companion.</div>
             <div class="thumb-row">
@@ -181,14 +182,14 @@
             <div class="detail-block">
               <h3>On-Device TinyML Perception</h3>
               <p>
-                Trained and optimized a lightweight <strong>MobileNetV2/FOMO</strong> neural network for person, fire, and smoke detection. Quantized to <strong>Int8 (3.0 MB)</strong>, enabling $\sim$550 ms inference at only 350 mW. Incorporated temporal filtering (requiring 2 consecutive positive detections) to reject 99% of false alarms before broadcasting telemetry.
+                Trained and optimized a lightweight <strong>MobileNetV2/FOMO</strong> neural network for person, fire, and smoke detection. Quantized to <strong>Int8 (3.0 MB)</strong>, enabling ~550 ms on-device inference directly on the microcontroller. Incorporated temporal filtering (requiring 2 consecutive positive detections) to eliminate false alarms before broadcasting telemetry.
               </p>
             </div>
 
             <div class="detail-block">
               <h3>Decentralized Swarm Networking</h3>
               <p>
-                Implemented an infrastructure-free <strong>ESP-NOW mesh</strong> protocol running alongside a bidirectional MAVLink v2 bridge, achieving a <strong>&gt;95% packet delivery ratio over 125 m</strong> line-of-sight for inter-drone telemetry forwarding.
+                Implemented an infrastructure-free <strong>ESP-NOW mesh</strong> protocol running alongside a bidirectional MAVLink v2 bridge for reliable peer-to-peer telemetry forwarding between UAV nodes without external base stations.
               </p>
             </div>
           </div>
@@ -208,9 +209,10 @@
           
           <!-- Project 1: Smart Pen TinyML -->
           <article class="project-card">
-            <div class="card-media">
+            <div class="card-media" data-full="assets/PEN-HARDWARE-1.jpg" data-caption="Smart Pen: Miniaturized 6-axis IMU embedded sensor hardware prototype">
               <img src="assets/PEN-HARDWARE-1.jpg" alt="Smart Pen Hardware Prototype" loading="lazy">
               <span class="card-badge">TinyML &amp; Hardware</span>
+              <span class="card-hint">Hover to zoom · Click to expand</span>
             </div>
             <div class="card-body">
               <div class="card-meta">Commercial Project · TinyML</div>
@@ -231,9 +233,10 @@
 
           <!-- Project 2: Flywing Mini Clone Modular Stack -->
           <article class="project-card">
-            <div class="card-media">
+            <div class="card-media" data-full="assets/P3-FC-top.jpg" data-caption="Modular 3-PCB Flight Stack (SpeedyBee F405 Clone) — Assembled Hardware">
               <img src="assets/P3-FC-top.jpg" alt="Modular 3-PCB Flight Stack" loading="lazy">
               <span class="card-badge">Custom PCB Stack</span>
+              <span class="card-hint">Hover to zoom · Click to expand</span>
             </div>
             <div class="card-body">
               <div class="card-meta">Commercial Project · Avionics PCB</div>
@@ -254,9 +257,10 @@
 
           <!-- Project 3: Signatics Automated Test Hardware -->
           <article class="project-card">
-            <div class="card-media">
+            <div class="card-media" data-full="assets/signatics-work-image.jpg" data-caption="Signatics High-Power Multi-Rail DC Power &amp; SDR Test Automation Hardware">
               <img src="assets/signatics-work-image.jpg" alt="Signatics Multi-Rail Test Hardware" loading="lazy">
               <span class="card-badge">Industrial Hardware</span>
+              <span class="card-hint">Hover to zoom · Click to expand</span>
             </div>
             <div class="card-body">
               <div class="card-meta">Signatics · Jul 2026 – Present</div>
@@ -277,12 +281,13 @@
 
           <!-- Project 4: FPGA Digital Logic Engine -->
           <article class="project-card">
-            <div class="card-media">
+            <div class="card-media" data-full="assets/VGA-game-fpga.webp" data-caption="FPGA Synchronous Digital Control &amp; Real-Time 640x480 VGA Game Demo">
               <picture>
                 <source srcset="assets/VGA-game-fpga.webp" type="image/webp">
                 <img src="assets/VGA-game-fpga.gif" alt="FPGA Real-Time 640x480 VGA Game Demo" loading="lazy">
               </picture>
               <span class="card-badge">FPGA &amp; Verilog</span>
+              <span class="card-hint">Hover to zoom · Click to expand</span>
             </div>
             <div class="card-body">
               <div class="card-meta">Open-Source Research · GitHub</div>
@@ -303,9 +308,10 @@
 
           <!-- Project 5: Fixed-Wing UAV -->
           <article class="project-card">
-            <div class="card-media">
+            <div class="card-media" data-full="assets/project_image_fixed_wing.webp" data-caption="Fixed-Wing UAV: Midwing-Boom Airframe &amp; Power Wiring">
               <img src="assets/project_image_fixed_wing.webp" alt="Fixed-Wing UAV Midwing Boom Airframe" loading="lazy">
               <span class="card-badge">UAV &amp; Avionics</span>
+              <span class="card-hint">Hover to zoom · Click to expand</span>
             </div>
             <div class="card-body">
               <div class="card-meta">PIEAS Competition Project</div>

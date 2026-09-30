@@ -82,12 +82,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Bind to review cards & media
-  const reviewMediaEls = document.querySelectorAll('.review-media');
-  reviewMediaEls.forEach(media => {
-    media.addEventListener('click', () => {
-      const src = media.getAttribute('data-full') || media.querySelector('img')?.src;
-      const caption = media.getAttribute('data-caption') || media.querySelector('img')?.alt;
+  // Bind to all zoomable media: review cards, project cards & flagship image
+  const zoomableEls = document.querySelectorAll('.review-media, .card-media, .main-image-container');
+  zoomableEls.forEach(el => {
+    el.addEventListener('click', () => {
+      const src = el.getAttribute('data-full') || el.querySelector('img')?.src;
+      let caption = el.getAttribute('data-caption') || el.querySelector('img')?.alt;
+      if (el.classList.contains('main-image-container')) {
+        const flagshipCaption = document.getElementById('flagshipCaption');
+        if (flagshipCaption) caption = flagshipCaption.textContent;
+      }
       if (src) openModal(src, caption);
     });
   });
