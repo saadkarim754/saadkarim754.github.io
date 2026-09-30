@@ -44,7 +44,10 @@
         <!-- Profile Image on the LEFT (Cutout, blending seamlessly) -->
         <div class="hero-profile">
           <div class="profile-cutout">
-            <img src="assets/Saads-profile.png" alt="Mian Saad Karim" class="profile-img">
+            <picture>
+              <source srcset="assets/Saads-profile.webp" type="image/webp">
+              <img src="assets/Saads-profile.png" alt="Mian Saad Karim" class="profile-img" fetchpriority="high">
+            </picture>
           </div>
         </div>
 
@@ -124,15 +127,15 @@
         <div class="flagship-card">
           <div class="flagship-gallery">
             <div class="main-image-container">
-              <img id="flagshipMainImg" src="assets/custom-fc-top.png" alt="Assembled 4-Layer Dual-MCU PCB (Top View)" class="gallery-hero-img">
+              <img id="flagshipMainImg" src="assets/custom-fc-top.webp" alt="Assembled 4-Layer Dual-MCU PCB (Top View)" class="gallery-hero-img">
             </div>
             <div class="image-caption" id="flagshipCaption">Assembled 4-layer dual-MCU avionics PCB (Top View): STM32F405 ArduPilot flight controller + ESP32-S3 Edge AI companion.</div>
             <div class="thumb-row">
-              <button class="thumb-btn active" data-src="assets/custom-fc-top.png" data-caption="Assembled 4-layer dual-MCU avionics PCB (Top View): STM32F405 ArduPilot flight controller + ESP32-S3 Edge AI companion.">
-                <img src="assets/custom-fc-top.png" alt="Assembled PCB Top">
+              <button class="thumb-btn active" data-src="assets/custom-fc-top.webp" data-caption="Assembled 4-layer dual-MCU avionics PCB (Top View): STM32F405 ArduPilot flight controller + ESP32-S3 Edge AI companion.">
+                <img src="assets/custom-fc-top.webp" alt="Assembled PCB Top" loading="lazy">
               </button>
-              <button class="thumb-btn" data-src="assets/custom-fc-bottom.png" data-caption="Assembled 4-layer dual-MCU avionics PCB (Bottom View): Buck-boost power stage, sensor array, and reverse-polarity protection.">
-                <img src="assets/custom-fc-bottom.png" alt="Assembled PCB Bottom">
+              <button class="thumb-btn" data-src="assets/custom-fc-bottom.webp" data-caption="Assembled 4-layer dual-MCU avionics PCB (Bottom View): Buck-boost power stage, sensor array, and reverse-polarity protection.">
+                <img src="assets/custom-fc-bottom.webp" alt="Assembled PCB Bottom" loading="lazy">
               </button>
               <button class="thumb-btn" data-src="assets/Custom-Drone-final-top.jpg" data-caption="Integrated micro-airframe with custom structural PCB functioning as both chassis and avionics motherboard.">
                 <img src="assets/Custom-Drone-final-top.jpg" alt="Integrated Drone Airframe">
@@ -275,7 +278,10 @@
           <!-- Project 4: FPGA Digital Logic Engine -->
           <article class="project-card">
             <div class="card-media">
-              <img src="assets/VGA-game-fpga.gif" alt="FPGA Real-Time 640x480 VGA Game Demo" loading="lazy">
+              <picture>
+                <source srcset="assets/VGA-game-fpga.webp" type="image/webp">
+                <img src="assets/VGA-game-fpga.gif" alt="FPGA Real-Time 640x480 VGA Game Demo" loading="lazy">
+              </picture>
               <span class="card-badge">FPGA &amp; Verilog</span>
             </div>
             <div class="card-body">
