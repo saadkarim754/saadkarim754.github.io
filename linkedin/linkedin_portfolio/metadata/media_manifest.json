@@ -1,0 +1,111 @@
+[
+  {
+    "filename": "images/profile_photo_originalish.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D03AQGIyA9isPxCKA/profile-displayphoto-shrink_800_800/B4DZeFYOQ8GgAc-/0/1750289410122?e=1792627200&v=beta&t=FwG0DyQiXiQBMPfnD8Ev9idXuDV7_JhvpPCYHR-gPTI",
+    "downloaded": true,
+    "bytes": 103693
+  },
+  {
+    "filename": "images/profile_banner_source.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D16AQFFQrMIkfWwIQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1724245074437?e=1792627200&v=beta&t=1p9Z2n8ad_DwZPGcF2GC_wbzpzxpScJkPto7A63qk8A",
+    "downloaded": true,
+    "bytes": 26027
+  },
+  {
+    "filename": "images/activity_image_01.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D22AQGI_yf9O6hl5w/feedshare-shrink_480/B4DZ73qOWKKkAg-/0/1782271502204?e=1792627200&v=beta&t=tB9ylYiRB-FT1bBxKvB6wMR5brjABJLNSI_b1bbijYc",
+    "downloaded": true,
+    "bytes": 40384
+  },
+  {
+    "filename": "images/activity_image_02.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D22AQFX8J1Jg4DMDQ/feedshare-shrink_480/B4DZxNeYK6JkAw-/0/1770826335559?e=1792627200&v=beta&t=nE5S2W33QuwoSiCZPflxH7a2_QI13m56gC9f5zIFBm8",
+    "downloaded": true,
+    "bytes": 41262
+  },
+  {
+    "filename": "images/project_image_quantum_hackathon.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D22AQEuzBpxCTEu9g/feedshare-shrink_480/B4DZwSOPjQKQAs-/0/1769832249825?e=1792627200&v=beta&t=7vZmFXrtwimYqOqPJymPTwpOTOr0w9lir9rvjDetYhE",
+    "downloaded": true,
+    "bytes": 57502
+  },
+  {
+    "filename": "images/project_image_fixed_wing.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D22AQGdxqJddApDnw/feedshare-shrink_480/B4DZsYkSVhJYAY-/0/1765643733730?e=1792627200&v=beta&t=z9CcBZEd39usHULCJ0moXLSMpdUk33SbTDKk-HuBS4Q",
+    "downloaded": true,
+    "bytes": 45612
+  },
+  {
+    "filename": "images/project_image_activity_03.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D22AQEGfkMpcrYfWA/feedshare-shrink_480/B4DZk4PvKZJUAY-/0/1757585291037?e=1792627200&v=beta&t=Nnwi7T_XnZWlFTvUAclXzMPSUjav6Tvk-4PdudHOvM4",
+    "downloaded": true,
+    "bytes": 41638
+  },
+  {
+    "filename": "images/experience_media_01.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D1FAQGDJVigVvAX6Q/feedshare-document-cover-images_480/B4DZkLURs0HYBc-/0/1756831521369?e=1791349200&v=beta&t=G5jS6xKqlSNcs18XB9uRVW0U3iPenMGvVUy8zxiJMdo",
+    "downloaded": true,
+    "bytes": 54249
+  },
+  {
+    "filename": "images/cert_aiaa_full.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQFYDCxsEyxmew/profile-treasury-document-images_1280/B4DZrsgcgfGwAU-/1/1764904522784?e=1791417600&v=beta&t=NDjQhHaPpNGN-8m-oWioPQ-scQ_hK5Ovbh7HaJMO6uo",
+    "downloaded": true,
+    "bytes": 235980
+  },
+  {
+    "filename": "images/cert_aiaa_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQFYDCxsEyxmew/profile-treasury-document-cover-images_480/B4DZrsgcgfGwBI-/0/1764904522580?e=1791349200&v=beta&t=K2JjNDlqYJZuYSKGkUx0vNR7_K5ApB4dZBIFjDQoxcM",
+    "downloaded": true,
+    "bytes": 39746
+  },
+  {
+    "filename": "images/cert_usaid_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQF0wE-0CFBWTA/profile-treasury-document-cover-images_480/B4DZrshCDKG8BI-/0/1764904677523?e=1791349200&v=beta&t=nSOMancFLeTmGq761v0pee86g2FvwSZHzZRF74DcUU4",
+    "downloaded": true,
+    "bytes": 41285
+  },
+  {
+    "filename": "images/cert_fpv_drone_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQHVblHg2WqqjA/profile-treasury-image-shrink_160_160/B4DZhoyJSSHAAk-/0/1754104638520?e=1791349200&v=beta&t=KrN_1tX6BYaAX4hfNAXwpBiQCsHPyBLH3skfCbFCzy4",
+    "downloaded": true,
+    "bytes": 4508
+  },
+  {
+    "filename": "images/cert_onshape_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQGwcyIz9I0Tgw/profile-treasury-document-cover-images_480/profile-treasury-document-cover-images_480/0/1737613934935?e=1791349200&v=beta&t=JuMIDv2Cc0t-qVvK7HXUcRgLpVXr3v76qvyLuUH28v8",
+    "downloaded": true,
+    "bytes": 32623
+  },
+  {
+    "filename": "images/cert_rocket_science_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQENVwOXw7nLrg/profile-treasury-document-cover-images_480/profile-treasury-document-cover-images_480/0/1737095438654?e=1791349200&v=beta&t=kVayNVXDaE8vnF_Njt9osftyF6ZS6HJDxq1MwqZQip4",
+    "downloaded": true,
+    "bytes": 28334
+  },
+  {
+    "filename": "images/cert_sports_week_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQEFy7_Ph0Qpkg/profile-treasury-image-shrink_160_160/profile-treasury-image-shrink_160_160/0/1734466135041?e=1791349200&v=beta&t=WMyuQRek19yhPCA2vdCrxqnYF8xgxSsfIOcTFPhDyBg",
+    "downloaded": true,
+    "bytes": 4636
+  },
+  {
+    "filename": "images/cert_isywc_thumbnail.webp",
+    "source_url": "https://media.licdn.com/dms/image/v2/D4D2DAQGBbjQab73xJA/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1734465263746?e=1791349200&v=beta&t=0OpkQ39iu0f9J-tbKw2UC1ezbyG2Ww3iSHstsAVM70E",
+    "downloaded": true,
+    "bytes": 103259,
+    "full_resolution_filename": "images/cert_isywc_full.webp"
+  },
+  {
+    "filename": "images/profile_photo.webp",
+    "source": "browser_save_image",
+    "downloaded": true,
+    "bytes": 12890
+  },
+  {
+    "filename": "images/profile_banner.webp",
+    "source": "browser_save_image",
+    "downloaded": true,
+    "bytes": 85038
+  }
+]

@@ -1,145 +1,719 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mian Saad Karim - Electrical Engineering Portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="title.png" type="image/png">
-    <meta name="description" content="Interactive electrical engineering portfolio of Mian Saad Karim - PIEAS Student exploring UAVs, robotics, and embedded systems">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mian Saad Karim | Edge AI Hardware & Systems Engineer</title>
+  <meta name="description" content="Portfolio of Mian Saad Karim — Hardware and Embedded Systems Engineer specializing in custom PCB architectures for on-device Edge AI and AI-accelerated firmware.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Navigation Menu -->
-    <div class="top-nav">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="nav-icon">⚡</span>
-                <span class="nav-title">Mian Saad Karim</span>
-            </div>
-            <div class="nav-menu">
-                <button class="nav-btn" data-page="index">Home</button>
-                <button class="nav-btn" data-page="about">About</button>
-                <button class="nav-btn" data-page="experience">Experience</button>
-                <button class="nav-btn" data-page="projects">Projects</button>
-                <button class="nav-btn" data-page="skills">Skills</button>
-                <button class="nav-btn" data-page="contact">Contact</button>
-            </div>
-            <div class="nav-status">
-                <div class="nav-led red"></div>
-                <div class="nav-led green active"></div>
-                <div class="nav-led blue"></div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Binary Rain Background -->
-    <div class="binary-rain"></div>
-    
-    <!-- Circuit Board Background -->
-    <div class="circuit-background"></div>
-    
-    <!-- Main Container -->
-    <div class="main-container">
-        <!-- LCD Display showing name -->
-        <div class="lcd-container">
-            <div class="lcd-display">
-                <div class="lcd-screen">
-                    <div class="lcd-line line1" id="lcdLine1"></div>
-                    <div class="lcd-line line2" id="lcdLine2"></div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- OLED Profile Display -->
-        <div class="oled-container">
-            <div class="oled-display">
-                <div class="oled-screen">
-                    <img src="miansaadkarim.jpeg" alt="Saad Karim Profile" class="profile-image" id="profileImg">
-                    <div class="scan-lines"></div>
-                </div>
-                <div class="oled-border-glow"></div>
-            </div>
-        </div>
-        
-        <!-- Arduino-style Control Panel -->
-        <div class="control-panel">
-            <div>
-                <button class="arduino-button" data-page="about">
-                    <div class="button-led red"></div>
-                    ABOUT
-                </button>
-                <div class="button-label">Personal Info</div>
-            </div>
-            
-            <div>
-                <button class="arduino-button" data-page="experience">
-                    <div class="button-led green"></div>
-                    EXP
-                </button>
-                <div class="button-label">Work History</div>
-            </div>
-            
-            <div>
-                <button class="arduino-button" data-page="projects">
-                    <div class="button-led blue"></div>
-                    PROJ
-                </button>
-                <div class="button-label">Project Hub</div>
-            </div>
-            
-            <div>
-                <button class="arduino-button" data-page="skills">
-                    <div class="button-led yellow"></div>
-                    SKILLS
-                </button>
-                <div class="button-label">Tech Stack</div>
-            </div>
-            
-            <div>
-                <button class="arduino-button" data-page="contact">
-                    <div class="button-led purple"></div>
-                    CONTACT
-                </button>
-                <div class="button-label">Connect</div>
-            </div>
-            
-            <div>
-                <button class="arduino-button" onclick="window.open('https://github.com/saadkarim754', '_blank')">
-                    <div class="button-led cyan"></div>
-                    GITHUB
-                </button>
-                <div class="button-label">Repository</div>
-            </div>
-        </div>
-        
-        <!-- Enhanced Sensor Panel -->
-        <div class="sensor-panel">
-            <div class="sensor-group">
-                <div class="sensor-item">
-                    <div class="sensor-led red active" data-sensor="temp"></div>
-                    <div class="sensor-label">TEMP</div>
-                    <div class="sensor-value">23°C</div>
-                </div>
-                <div class="sensor-item">
-                    <div class="sensor-led green active" data-sensor="power"></div>
-                    <div class="sensor-label">PWR</div>
-                    <div class="sensor-value">5.0V</div>
-                </div>
-                <div class="sensor-item">
-                    <div class="sensor-led blue active" data-sensor="data"></div>
-                    <div class="sensor-label">DATA</div>
-                    <div class="sensor-value">1.2Gb</div>
-                </div>
-                <div class="sensor-item">
-                    <div class="sensor-led yellow active" data-sensor="freq"></div>
-                    <div class="sensor-label">FREQ</div>
-                    <div class="sensor-value">2.4GHz</div>
-                </div>
-            </div>
-        </div>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand">
+        <span class="brand-name">Mian Saad Karim</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#flagship">Featured Project</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Resume-Mian-Saad-Karim.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Resume PDF</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-layout">
+        <!-- Profile Image on the LEFT (Cutout, blending seamlessly) -->
+        <div class="hero-profile">
+          <div class="profile-cutout">
+            <img src="assets/Saads-profile.png" alt="Mian Saad Karim" class="profile-img">
+          </div>
+        </div>
+
+        <!-- Text on the RIGHT -->
+        <div class="hero-content">
+          <div class="hero-badge-row">
+            <span class="tech-tag">BS Electrical Engineering · PIEAS</span>
+          </div>
+          
+          <h1 class="hero-name">Mian Saad Karim</h1>
+          <p class="hero-tagline">Hardware &amp; Embedded Systems Engineer <span class="tagline-sep">·</span> Edge AI Specialist</p>
+          
+          <p class="hero-summary">
+            Hi, I'm an Electrical Engineer passionate about bringing intelligence to physical hardware. I specialize in designing custom electronics, developing bare-metal firmware, and deploying efficient on-device machine learning models. Whether architecting autonomous aerial robotics or sub-watt TinyML devices, I love transforming complex concepts into reliable, production-ready systems.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#flagship" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#experience" class="btn btn-secondary">
+              <span>Experience &amp; Education</span>
+            </a>
+            <a href="assets/Resume-Mian-Saad-Karim.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Resume PDF</span>
+            </a>
+            <a href="https://github.com/saadkarim754" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/mian-saad-karim" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.fiverr.com/users/mian_saad_karim" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 12h8M12 8v8"/></svg>
+              <span>Fiverr (5.0 ★)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights & Core Competencies Strip -->
+    <section class="metrics-strip">
+      <div class="container metrics-grid">
+        <div class="metric-card">
+          <span class="metric-val">Hardware &amp; PCB</span>
+          <span class="metric-label">Multi-layer routing, power stages &amp; DFM</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">Embedded C/C++</span>
+          <span class="metric-label">Bare-metal firmware, FreeRTOS &amp; ESP-IDF</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">Edge AI / TinyML</span>
+          <span class="metric-label">On-device neural inference &amp; sensor fusion</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-val">5.0 ★ Rating</span>
+          <span class="metric-label">Verified international client satisfaction on Fiverr</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP PROJECT (FYP & Thesis) -->
+    <section id="flagship" class="section flagship-section">
+      <div class="container">
+        <div class="section-tag">Undergraduate Thesis &amp; Research</div>
+        <h2 class="section-title">Autonomous Dual-MCU UAV for Edge AI Disaster Assessment</h2>
+        <p class="section-desc">
+          Conventional aerial robotics rely on heavy companion computers (Raspberry Pi/Jetson) or live video streaming to ground stations—both of which fail in post-disaster environments. I architected and flight-tested a custom, low-cost autonomous node pairing flight control with real-time on-device perception.
+        </p>
+
+        <div class="flagship-card">
+          <div class="flagship-gallery">
+            <div class="main-image-container">
+              <img id="flagshipMainImg" src="assets/custom-fc-top.png" alt="Assembled 4-Layer Dual-MCU PCB (Top View)" class="gallery-hero-img">
+            </div>
+            <div class="image-caption" id="flagshipCaption">Assembled 4-layer dual-MCU avionics PCB (Top View): STM32F405 ArduPilot flight controller + ESP32-S3 Edge AI companion.</div>
+            <div class="thumb-row">
+              <button class="thumb-btn active" data-src="assets/custom-fc-top.png" data-caption="Assembled 4-layer dual-MCU avionics PCB (Top View): STM32F405 ArduPilot flight controller + ESP32-S3 Edge AI companion.">
+                <img src="assets/custom-fc-top.png" alt="Assembled PCB Top">
+              </button>
+              <button class="thumb-btn" data-src="assets/custom-fc-bottom.png" data-caption="Assembled 4-layer dual-MCU avionics PCB (Bottom View): Buck-boost power stage, sensor array, and reverse-polarity protection.">
+                <img src="assets/custom-fc-bottom.png" alt="Assembled PCB Bottom">
+              </button>
+              <button class="thumb-btn" data-src="assets/Custom-Drone-final-top.jpg" data-caption="Integrated micro-airframe with custom structural PCB functioning as both chassis and avionics motherboard.">
+                <img src="assets/Custom-Drone-final-top.jpg" alt="Integrated Drone Airframe">
+              </button>
+              <button class="thumb-btn" data-src="assets/LIve-multiple-persons-detection.jpg" data-caption="Live on-device Edge AI inference: Real-time person detection feed captured on ESP32-S3 without cloud.">
+                <img src="assets/LIve-multiple-persons-detection.jpg" alt="Live AI Detection Feed">
+              </button>
+              <button class="thumb-btn" data-src="assets/LIVE-DASHboard-(feed-and-arm-disarm-buttons).jpg" data-caption="Onboard captive portal web dashboard over ad-hoc Wi-Fi for telemetry and flight control.">
+                <img src="assets/LIVE-DASHboard-(feed-and-arm-disarm-buttons).jpg" alt="Web Dashboard">
+              </button>
+              <button class="thumb-btn" data-src="assets/p2-pcb-render-top.png" data-caption="Altium 3D CAD render of the high-density dual-MCU PCB layout.">
+                <img src="assets/p2-pcb-render-top.png" alt="Altium 3D Render">
+              </button>
+            </div>
+          </div>
+
+          <div class="flagship-details">
+            <div class="tech-stack-row">
+              <span class="badge">STM32F405</span>
+              <span class="badge">ESP32-S3</span>
+              <span class="badge">Edge Impulse</span>
+              <span class="badge">FOMO / MobileNetV2</span>
+              <span class="badge">ESP-IDF</span>
+              <span class="badge">ArduPilot</span>
+              <span class="badge">Altium 4-Layer</span>
+              <span class="badge">MAVLink v2</span>
+            </div>
+
+            <div class="detail-block">
+              <h3>The Hardware Engineering</h3>
+              <p>
+                Engineered a custom <strong>4-layer PCB</strong> that functions simultaneously as the avionics motherboard and the mechanical airframe. Integrated high-efficiency TPS63020 buck-boost regulation, low-noise LDOs, and reverse-polarity P-MOSFET protection with controlled impedance routing for high-speed SPI, I2C, and UART.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h3>Bare-Metal Firmware from Scratch</h3>
+              <p>
+                Developed custom C/C++ firmware in <strong>ESP-IDF</strong> interfacing an OV2640 camera over DMA ping-pong buffers directly to internal SRAM and PSRAM. Authored ArduPilot hardware definitions (<code>hwdef.dat</code>) on the STM32 to handle the attitude control loops, failsafes, and sensor fusion (ICM-42688-P IMU, barometer, GPS).
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h3>On-Device TinyML Perception</h3>
+              <p>
+                Trained and optimized a lightweight <strong>MobileNetV2/FOMO</strong> neural network for person, fire, and smoke detection. Quantized to <strong>Int8 (3.0 MB)</strong>, enabling $\sim$550 ms inference at only 350 mW. Incorporated temporal filtering (requiring 2 consecutive positive detections) to reject 99% of false alarms before broadcasting telemetry.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h3>Decentralized Swarm Networking</h3>
+              <p>
+                Implemented an infrastructure-free <strong>ESP-NOW mesh</strong> protocol running alongside a bidirectional MAVLink v2 bridge, achieving a <strong>&gt;95% packet delivery ratio over 125 m</strong> line-of-sight for inter-drone telemetry forwarding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-tag">Selected Works</div>
+        <h2 class="section-title">Specialized Hardware &amp; Embedded Projects</h2>
+        <p class="section-desc">Selected commercial client work, research prototypes, and digital design platforms.</p>
+
+        <!-- Project Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: Smart Pen TinyML -->
+          <article class="project-card">
+            <div class="card-media">
+              <img src="assets/PEN-HARDWARE-1.jpg" alt="Smart Pen Hardware Prototype" loading="lazy">
+              <span class="card-badge">TinyML &amp; Hardware</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">Commercial Project · TinyML</div>
+              <h3 class="card-title">Smart Pen: On-Device Motion &amp; Handwriting TinyML</h3>
+              <p class="card-text">
+                Designed a miniaturized embedded sensor prototype capturing 6-axis IMU dynamics to classify handwritten words and gestures on-device—without cameras or cloud processing.
+              </p>
+              <ul class="card-features">
+                <li>High-rate sensor logging firmware written in C/C++ with precise timestamps.</li>
+                <li>Edge Impulse DSP spectral analysis &amp; 1D CNN classifier with 100ms sliding window stride.</li>
+                <li>Achieved <strong>&gt;95.9% cross-validation accuracy</strong> deployed directly onto microcontroller hardware.</li>
+              </ul>
+              <div class="card-tags">
+                <span>TinyML</span><span>IMU Sensor</span><span>Edge Impulse</span><span>C/C++</span><span>DSP</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Flywing Mini Clone Modular Stack -->
+          <article class="project-card">
+            <div class="card-media">
+              <img src="assets/P3-FC-top.jpg" alt="Modular 3-PCB Flight Stack" loading="lazy">
+              <span class="card-badge">Custom PCB Stack</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">Commercial Project · Avionics PCB</div>
+              <h3 class="card-title">Modular 3-PCB Flight Stack (SpeedyBee F405 Clone)</h3>
+              <p class="card-text">
+                Ground-up PCB re-engineering of a compact 3-board modular avionics system: Flight Controller (STM32F405, ICM-42688-P), high-current Power Distribution Board (PDB), and USB-C breakout.
+              </p>
+              <ul class="card-features">
+                <li>Engineered high-current copper planes handling up to 40A with TVS surge protection.</li>
+                <li>High-density routing with impedance-matched differential USB lines and ESD suppression.</li>
+                <li>Generated full DFM manufacturing package fabricated via JLCPCB.</li>
+              </ul>
+              <div class="card-tags">
+                <span>Altium Designer</span><span>4-Layer PCB</span><span>Power Design</span><span>STM32F405</span><span>DFM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Signatics Automated Test Hardware -->
+          <article class="project-card">
+            <div class="card-media">
+              <img src="assets/signatics-work-image.jpg" alt="Signatics Multi-Rail Test Hardware" loading="lazy">
+              <span class="card-badge">Industrial Hardware</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">Signatics · Jul 2026 – Present</div>
+              <h3 class="card-title">High-Power Multi-Rail Power &amp; SDR Test Automation</h3>
+              <p class="card-text">
+                Designing custom hardware test fixtures and multi-rail DC power distribution platforms to automate verification and bring-up for Software Defined Radio (SDR) and communication systems.
+              </p>
+              <ul class="card-features">
+                <li>Engineered 12V/24V power stages with reverse-polarity P-MOSFETs and overcurrent fuse protection.</li>
+                <li>Automated signal integrity verification, clock analysis, and power sequencing.</li>
+                <li>Systematic fault isolation using oscilloscopes, logic analyzers, and lab power supplies.</li>
+              </ul>
+              <div class="card-tags">
+                <span>Power Systems</span><span>SDR Hardware</span><span>Test Automation</span><span>Signal Integrity</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: FPGA Digital Logic Engine -->
+          <article class="project-card">
+            <div class="card-media">
+              <img src="assets/VGA-game-fpga.gif" alt="FPGA Real-Time 640x480 VGA Game Demo" loading="lazy">
+              <span class="card-badge">FPGA &amp; Verilog</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">Open-Source Research · GitHub</div>
+              <h3 class="card-title">FPGA Synchronous Digital Control &amp; VGA Engine</h3>
+              <p class="card-text">
+                Designed and synthesized all-digital synchronous hardware on a Xilinx Spartan-3E FPGA using synthesizable Verilog RTL without relying on external controller ICs.
+              </p>
+              <ul class="card-features">
+                <li>Custom UART RX/TX FSM cores, baud generators, and dual-axis PWM motion control.</li>
+                <li>Complete 640×480 VGA display controller generated purely in Verilog with pixel timing counters.</li>
+                <li>Simulation in ModelSim and timing closure in Xilinx ISE/Vivado with zero timing violations.</li>
+              </ul>
+              <div class="card-tags">
+                <span>Verilog HDL</span><span>Xilinx ISE</span><span>ModelSim</span><span>FPGA IP</span><span>Timing Closure</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Fixed-Wing UAV -->
+          <article class="project-card">
+            <div class="card-media">
+              <img src="assets/project_image_fixed_wing.webp" alt="Fixed-Wing UAV Midwing Boom Airframe" loading="lazy">
+              <span class="card-badge">UAV &amp; Avionics</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">PIEAS Competition Project</div>
+              <h3 class="card-title">Fixed-Wing UAV: Airframe Fabrication &amp; Power Wiring</h3>
+              <p class="card-text">
+                Co-developed a fixed-wing midwing-boom UAV for autonomous flight competitions. Led power distribution, ESC/servo harness routing, and avionics flight validation.
+              </p>
+              <ul class="card-features">
+                <li>Designed high-current power routing to minimize EMI and magnetic distortion on compass sensors.</li>
+                <li>Fabricated lightweight composite midwing structure achieving stable autonomous flight.</li>
+                <li>Completed assembly, electrical checkout, and flight testing within a 1-week timeline.</li>
+              </ul>
+              <div class="card-tags">
+                <span>Fixed-Wing</span><span>Power Distribution</span><span>Aerodynamics</span><span>Avionics Wiring</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: 6-DOF Robotic Arm (Text-only, no forced image) -->
+          <article class="project-card text-only">
+            <div class="card-body">
+              <div class="card-meta">Robotics Research · MATLAB &amp; CoppeliaSim</div>
+              <h3 class="card-title">6-DOF Robotic Arm: Kinematic Modeling &amp; Simulation</h3>
+              <p class="card-text">
+                Designed, modeled, and simulated a 6-degree-of-freedom robotic manipulator tailored for automated welding applications to overcome manual consistency constraints.
+              </p>
+              <ul class="card-features">
+                <li>Modular mechanical component modeling in Onshape/SolidWorks with full URDF export.</li>
+                <li>Forward/inverse kinematics and workspace boundary analysis formulated in MATLAB.</li>
+                <li>Implemented closed-loop trajectory planning and dynamic simulation in CoppeliaSim.</li>
+              </ul>
+              <div class="card-tags">
+                <span>Robotics</span><span>Kinematics</span><span>MATLAB</span><span>CoppeliaSim</span><span>Onshape CAD</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: Biometric IoT Access Control (Text-only, no forced image) -->
+          <article class="project-card text-only">
+            <div class="card-body">
+              <div class="card-meta">Embedded IoT Systems</div>
+              <h3 class="card-title">Distributed Biometric Access Controller (Dual ESP32s)</h3>
+              <p class="card-text">
+                Engineered a distributed security node pairing an AS608 optical fingerprint sensor with two interconnected ESP32 microcontrollers and Adafruit IO cloud telemetry.
+              </p>
+              <ul class="card-features">
+                <li>Decoupled real-time biometric scanning and servo actuation from cloud telemetry over UART.</li>
+                <li>Real-time event logging and remote administration dashboard hosted on Adafruit IO.</li>
+                <li>Failsafe power isolation and local authentication cache in non-volatile flash.</li>
+              </ul>
+              <div class="card-tags">
+                <span>ESP32</span><span>Biometrics</span><span>IoT</span><span>Adafruit IO</span><span>UART</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT REVIEWS & ENDORSEMENTS -->
+    <section id="reviews" class="section reviews-section">
+      <div class="container">
+        <div class="section-tag">Client Reviews &amp; Endorsements</div>
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title">Verified Commercial Feedback</h2>
+            <p class="section-desc">Independent 5.0-star reviews and project feedback from international clients on Fiverr.</p>
+          </div>
+          <a href="https://www.fiverr.com/users/mian_saad_karim" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+            <span>View Fiverr Profile</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1: Flight Controller Stack -->
+          <article class="review-card">
+            <div class="review-media" data-full="assets/Review-from-aiden-on-his-custom-fc-project-p4.png" data-caption="Fiverr Review from awesumaiden (United States) — SpeedyBee F405 Modular 3-PCB Flight Stack Clone (5.0 ★)">
+              <img src="assets/Review-from-aiden-on-his-custom-fc-project-p4.png" alt="Client Review from awesumaiden on Fiverr" loading="lazy">
+              <span class="review-hint">Hover to zoom · Click to expand</span>
+            </div>
+            <div class="review-body">
+              <div class="review-stars">★★★★★ <span class="review-score">5.0</span></div>
+              <div class="review-client">awesumaiden <span class="review-country">· United States</span></div>
+              <div class="review-project">SpeedyBee F405 Modular 3-PCB Flight Stack Clone</div>
+              <p class="review-quote">
+                Verified client feedback praising technical precision across schematic capture, 4-layer PCB layout, high-current power routing, and DFM deliverables.
+              </p>
+            </div>
+          </article>
+
+          <!-- Review 2: Smart Pen TinyML -->
+          <article class="review-card">
+            <div class="review-media" data-full="assets/Third-project-pen-classification-review.png" data-caption="Fiverr Review from sbkaufman (United States) — Smart Pen: On-Device Motion &amp; Handwriting TinyML (5.0 ★)">
+              <img src="assets/Third-project-pen-classification-review.png" alt="Client Review from sbkaufman on Fiverr" loading="lazy">
+              <span class="review-hint">Hover to zoom · Click to expand</span>
+            </div>
+            <div class="review-body">
+              <div class="review-stars">★★★★★ <span class="review-score">5.0</span></div>
+              <div class="review-client">sbkaufman <span class="review-country">· United States</span></div>
+              <div class="review-project">Smart Pen: On-Device Motion &amp; Handwriting TinyML</div>
+              <p class="review-quote">
+                Verified client endorsement highlighting data collection firmware, 1D CNN model training (&gt;95.9% cross-validation accuracy), and embedded hardware deployment.
+              </p>
+            </div>
+          </article>
+
+          <!-- Review 3: Voice Recognition Firmware -->
+          <article class="review-card">
+            <div class="review-media" data-full="assets/Second-fiver-project-review.png" data-caption="Fiverr Review from champ8242 (International) — ESP32-S3 Voice Keyword Recognition &amp; Firmware (5.0 ★)">
+              <img src="assets/Second-fiver-project-review.png" alt="Client Review from champ8242 on Fiverr" loading="lazy">
+              <span class="review-hint">Hover to zoom · Click to expand</span>
+            </div>
+            <div class="review-body">
+              <div class="review-stars">★★★★★ <span class="review-score">5.0</span></div>
+              <div class="review-client">champ8242 <span class="review-country">· International</span></div>
+              <div class="review-project">ESP32-S3 Voice Keyword Recognition &amp; Firmware</div>
+              <p class="review-quote">
+                Verified client feedback endorsing production-ready C++ firmware, DMA audio sampling, and edge acoustic classification on ESP32-S3.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-tag">Work Experience</div>
+        <h2 class="section-title">Engineering Career &amp; Experience</h2>
+        <p class="section-desc">Hands-on industry, aerospace defense, and commercial contract experience across PCB layout, power systems, and embedded firmware.</p>
+
+        <div class="timeline-list">
+          
+          <!-- Experience 1: Signatics -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-role">Hardware Engineer</h3>
+                <span class="timeline-company">Signatics</span>
+              </div>
+              <span class="timeline-date">Jul 2026 – Present</span>
+            </div>
+            <p class="timeline-desc">
+              Designing custom high-power multi-rail DC power distribution platforms and automated test fixtures to streamline verification for Software Defined Radio (SDR) and communication platforms.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Engineered 12V/24V high-current power stages with reverse-polarity P-MOSFETs and overcurrent protection.</li>
+              <li>Automated signal integrity verification, clock analysis, and power sequencing using bench oscilloscopes and logic analyzers.</li>
+              <li>Authored test scripts and automated bring-up routines, significantly reducing hardware debugging cycles.</li>
+            </ul>
+          </article>
+
+          <!-- Experience 2: Saf Shikan -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-role">Electrical Engineer (Part-Time)</h3>
+                <span class="timeline-company">Saf Shikan</span>
+              </div>
+              <span class="timeline-date">Sep 2025 – Jun 2026</span>
+            </div>
+            <p class="timeline-desc">
+              Led the electrical design and flight controller firmware development for autonomous micro-UAVs deployed in decentralized swarm research.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Wrote and field-tested low-level flight controller firmware for ESP32 microcontrollers with sensor fusion (IMU, optical-flow).</li>
+              <li>Configured and calibrated Pixhawk-based research drones with Raspberry Pi companion computers for autonomous flight missions.</li>
+              <li>Prototyped lightweight airframe-integrated electronics to optimize thrust-to-weight margins.</li>
+            </ul>
+          </article>
+
+          <!-- Experience 3: Freelance -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-role">Embedded Systems &amp; PCB Design Engineer</h3>
+                <span class="timeline-company">Commercial Clients (Fiverr 5.0 ★)</span>
+              </div>
+              <span class="timeline-date">2024 – Present</span>
+            </div>
+            <p class="timeline-desc">
+              Contract embedded design services covering end-to-end hardware development, schematic capture, multi-layer PCB layout, and TinyML sensor classification.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Delivered complete 3-PCB modular avionics stack (SpeedyBee F405 Wing Mini clone: FC, 40A PDB, USB-C breakout).</li>
+              <li>Engineered Smart Pen embedded prototype with 6-axis IMU logging and on-device 1D CNN classification (&gt;95.9% accuracy).</li>
+              <li>Maintained flawless 5.0-star client reviews across all hardware and firmware deliverables.</li>
+            </ul>
+          </article>
+
+          <!-- Experience 4: NASTP -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-role">Engineering Intern (Quest Program)</h3>
+                <span class="timeline-company">National Aerospace Science &amp; Technology Park (NASTP)</span>
+              </div>
+              <span class="timeline-date">Jul 2025 – Aug 2025</span>
+            </div>
+            <p class="timeline-desc">
+              Contributed to embedded systems prototyping, sensor integration, and STEM hardware modules; successfully secured competitive NASTP project budget funding.
+            </p>
+          </article>
+
+          <!-- Experience 5: PAC Kamra -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-role">Avionics Engineering Intern</h3>
+                <span class="timeline-company">Pakistan Aeronautical Complex (PAC) Kamra</span>
+              </div>
+              <span class="timeline-date">Jul 2024</span>
+            </div>
+            <p class="timeline-desc">
+              Gained practical hands-on experience in military avionics manufacturing, RF line testing, harness routing, and defense aircraft electrical systems inspection.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-tag">Education</div>
+        <h2 class="section-title">Academic Background</h2>
+        <p class="section-desc">Formal electrical engineering education with a core concentration in embedded systems, digital signal processing, and robotics.</p>
+
+        <div class="education-card">
+          <div class="edu-header">
+            <div>
+              <h3 class="edu-degree">Bachelor of Science in Electrical Engineering</h3>
+              <span class="edu-school">Pakistan Institute of Engineering &amp; Applied Sciences (PIEAS), Islamabad</span>
+            </div>
+            <span class="edu-date">Graduated Jul 2026</span>
+          </div>
+
+          <div class="edu-body">
+            <div class="edu-block">
+              <h4>Undergraduate Thesis &amp; Capstone</h4>
+              <p>
+                <strong>Autonomous Dual-MCU UAV Node for Edge AI Disaster Assessment:</strong> Designed, fabricated, and flight-tested a custom 4-layer dual-MCU PCB (STM32F405 + ESP32-S3) integrating real-time quantized neural inference (FOMO/MobileNetV2) and decentralized ESP-NOW mesh networking.
+              </p>
+            </div>
+
+            <div class="edu-block">
+              <h4>Key Coursework &amp; Competencies</h4>
+              <div class="edu-chips">
+                <span>Embedded Systems</span>
+                <span>Digital Signal Processing</span>
+                <span>Linear Control Systems</span>
+                <span>Computer Architecture</span>
+                <span>Power Electronics</span>
+                <span>Digital Logic &amp; FPGA Design</span>
+                <span>RF &amp; Microwave Engineering</span>
+                <span>Robotics &amp; Autonomous Systems</span>
+              </div>
+            </div>
+
+            <div class="edu-block">
+              <h4>Honors &amp; Professional Certifications</h4>
+              <ul class="cert-list">
+                <li><strong>Certified Onshape Associate:</strong> Mechanical CAD &amp; 3D Modeling (PTC)</li>
+                <li><strong>AIAA Design Build Fly (DBF):</strong> Competitive Aerospace Engineering &amp; Autonomous Flight Validation</li>
+                <li><strong>ISYWC Delegate:</strong> International Space &amp; Youth Conference</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY / METHODOLOGY -->
+    <section id="methodology" class="section methodology-section">
+      <div class="container">
+        <div class="section-tag">Philosophy</div>
+        <h2 class="section-title">Hardware for AI, AI for Hardware</h2>
+        <p class="section-desc">Bridging the physical constraints of silicon with modern AI acceleration workflows.</p>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <span class="philo-num">01</span>
+            <h3>Custom Silicon &amp; PCB Architectures</h3>
+            <p>
+              Running AI on the edge cannot be done with generic off-the-shelf boards. I design dedicated PCB stackups tailored for the target model: optimizing DMA memory channels, sizing low-noise power rails, and preventing brownouts during RF bursts.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <span class="philo-num">02</span>
+            <h3>On-Device Model Optimization</h3>
+            <p>
+              Model quantization (Int8), structural pruning, and memory-aware DSP preprocessing allow neural networks to execute within sub-megabyte SRAM and flash limits at sub-watt power budgets without sacrificing detection accuracy.
+            </p>
+          </div>
+
+          <div class="philosophy-card">
+            <span class="philo-num">03</span>
+            <h3>AI-Assisted Firmware Development</h3>
+            <p>
+              I leverage AI-assisted coding and agentic workflows to rapidly generate register-level drivers, synthesize test vectors, perform static analysis, and accelerate embedded bring-up from days to hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL STACK SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-tag">Technical Stack</div>
+        <h2 class="section-title">Technical Skillset Matrix</h2>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Custom PCB Design</h3>
+            <ul>
+              <li><strong>EDA Tools:</strong> Altium Designer, EasyEDA, KiCad</li>
+              <li><strong>Stackups:</strong> 2-Layer &amp; 4-Layer (Signal/GND/Power planes)</li>
+              <li><strong>Fabrication:</strong> DFM rules, Gerber/Drill generation, JLCPCB</li>
+              <li><strong>Power Stages:</strong> Buck-boost (TPS63020), LDOs, reverse-polarity P-FETs</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Embedded Firmware &amp; MCUs</h3>
+            <ul>
+              <li><strong>Microcontrollers:</strong> STM32F405 (Cortex-M4), ESP32-S3, ESP32</li>
+              <li><strong>Frameworks:</strong> ESP-IDF, FreeRTOS, ArduPilot (custom hwdef), Bare-metal</li>
+              <li><strong>Languages:</strong> Embedded C, C++, Python, Verilog HDL</li>
+              <li><strong>Drivers:</strong> DMA ping-pong buffers, Timers, Interrupts, ADC, PWM</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Edge AI &amp; TinyML</h3>
+            <ul>
+              <li><strong>Tools:</strong> Edge Impulse, TensorFlow Lite Micro</li>
+              <li><strong>Architectures:</strong> FOMO, MobileNetV2, 1D CNNs, MFCC Audio</li>
+              <li><strong>Techniques:</strong> Int8 Quantization, sliding window DSP, NMS</li>
+              <li><strong>Sensors:</strong> OV2640 DVP Camera, 6-Axis IMUs (ICM-42688-P)</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Protocols &amp; Diagnostics</h3>
+            <ul>
+              <li><strong>Buses:</strong> SPI, I2C, UART, RS-485 / Modbus, USB-C</li>
+              <li><strong>Wireless:</strong> ESP-NOW decentralized mesh, Wi-Fi, MAVLink v2</li>
+              <li><strong>Lab Equipment:</strong> Oscilloscopes, Logic Analyzers, Multimeters</li>
+              <li><strong>Prototyping:</strong> SMD Soldering, 3D Printing (CAD Onshape)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-container">
+        <div class="section-tag">Contact</div>
+        <h2 class="section-title">Let’s Build Next-Generation Edge Hardware</h2>
+        <p class="section-desc">
+          I am currently open to full-time engineering roles, remote contracts, and graduate research opportunities in Edge AI, embedded systems, and autonomous UAV platforms.
+        </p>
+
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:saadkarim754@gmail.com" class="contact-val">saadkarim754@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span class="contact-val">Islamabad, Pakistan (Open to Remote / Relocation)</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Profiles</span>
+            <div class="contact-links">
+              <a href="https://github.com/saadkarim754" target="_blank" rel="noopener">GitHub</a>
+              <span class="sep">/</span>
+              <a href="https://linkedin.com/in/mian-saad-karim" target="_blank" rel="noopener">LinkedIn</a>
+              <span class="sep">/</span>
+              <a href="https://www.fiverr.com/users/mian_saad_karim" target="_blank" rel="noopener">Fiverr (5.0 ★)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Mian Saad Karim · Edge AI Hardware &amp; Systems Engineer</p>
+      <p class="footer-sub">Built with clean HTML, CSS &amp; vanilla JS · Designed with precision</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Inspection of Review Screenshots -->
+  <div id="imageModal" class="image-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Close Preview">&times;</button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="Enlarged Review Screenshot">
+      </div>
+      <div id="modalCaption" class="modal-caption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
