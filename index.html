@@ -30,6 +30,7 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <a href="assets/Resume-Mian-Saad-Karim.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Resume PDF</a>
+        <a href="assets/Resume-Academic-Research-Mian-Saad-Karim.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="border-color: #38bdf8; color: #38bdf8;">Academic CV</a>
       </nav>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
         <span></span><span></span><span></span>
@@ -55,6 +56,7 @@
         <div class="hero-content">
           <div class="hero-badge-row">
             <span class="tech-tag">BS Electrical Engineering · PIEAS</span>
+            <span class="tech-tag" style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">USAID Merit Scholar</span>
           </div>
           
           <h1 class="hero-name">Mian Saad Karim</h1>
@@ -76,6 +78,10 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
               <span>Resume PDF</span>
             </a>
+            <a href="assets/Resume-Academic-Research-Mian-Saad-Karim.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Academic CV (Projects)</span>
+            </a>
             <a href="https://github.com/saadkarim754" target="_blank" rel="noopener" class="btn btn-secondary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               <span>GitHub</span>
@@ -86,7 +92,7 @@
             </a>
             <a href="https://www.fiverr.com/users/mian_saad_karim" target="_blank" rel="noopener" class="btn btn-secondary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 12h8M12 8v8"/></svg>
-              <span>Fiverr (5.0 ★)</span>
+              <span>Fiverr (4.8 ★)</span>
             </a>
           </div>
         </div>
@@ -190,6 +196,21 @@
               <h3>Decentralized Swarm Networking</h3>
               <p>
                 Implemented an infrastructure-free <strong>ESP-NOW mesh</strong> protocol running alongside a bidirectional MAVLink v2 bridge for reliable peer-to-peer telemetry forwarding between UAV nodes without external base stations.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h3>Hard Debugging Challenge Solved</h3>
+              <p>
+                <strong>The Issue:</strong> During high-throttle bursts, severe high-current motor inductive kickback and switching noise coupled into the common ground return, causing 3.3V rail voltage drops and IMU yaw drift.<br>
+                <strong>The Fix:</strong> Diagnosed the root cause using bench oscilloscopes and resolved it by redesigning to a dedicated star-ground topology, adding localized LC power rail filtering, and installing flyback diode suppression across inductive motor lines.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h3>Autonomous Flight &amp; Swarm Outcomes</h3>
+              <p>
+                Led hardware &amp; embedded development in a 3-person team at PIEAS (personally owning 100% of the PCB design, DMA drivers, and dual-MCU integration). Validated in outdoor flight tests across <strong>2 physical autonomous multirotor nodes + 1 ground bridge node</strong> over decentralized ESP-NOW mesh, executing multi-altitude waypoint navigation and automatic descent upon positive survivor detection.
               </p>
             </div>
           </div>
@@ -449,22 +470,41 @@
 
         <div class="timeline-list">
           
+          <!-- Experience 0: QuickGen Technologies -->
+          <article class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-role">Embedded Systems Engineer</h3>
+                <span class="timeline-company">QuickGen Technologies</span>
+              </div>
+              <span class="timeline-date">Aug 2026 – Present</span>
+            </div>
+            <p class="timeline-desc">
+              Developing end-to-end embedded hardware and firmware solutions from initial client specifications to validated functional prototypes.
+            </p>
+            <ul class="timeline-bullets">
+              <li>Designed an AI-enabled calculator integrating an STM32 MCU and a Raspberry Pi Compute Module 5 (CM5), packaging high-density processing within standard handheld calculator footprint constraints.</li>
+              <li>Engineered a screenless NFC-driven children's smart speaker based on an ESP32-S3, implementing NFC card identification, SD-card audio playback circuitry, and battery management.</li>
+              <li>Handled the complete hardware lifecycle: schematic capture, PCB layout, component selection, DFM manufacturing handoff, and physical bring-up.</li>
+            </ul>
+          </article>
+
           <!-- Experience 1: Signatics -->
           <article class="timeline-item">
             <div class="timeline-header">
               <div class="timeline-title-group">
-                <h3 class="timeline-role">Hardware Engineer</h3>
+                <h3 class="timeline-role">Hardware Design &amp; Verification Engineer</h3>
                 <span class="timeline-company">Signatics</span>
               </div>
               <span class="timeline-date">Jul 2026 – Present</span>
             </div>
             <p class="timeline-desc">
-              Designing custom high-power multi-rail DC power distribution platforms and automated test fixtures to streamline verification for Software Defined Radio (SDR) and communication platforms.
+              Embedded Hardware Design &amp; Verification Engineer within a 10-person hardware testing department (60-person organization). Designing custom high-power multi-rail DC power distribution platforms and automated test fixtures to streamline verification for Software Defined Radio (SDR) and communication platforms.
             </p>
             <ul class="timeline-bullets">
-              <li>Engineered 12V/24V high-current power stages with reverse-polarity P-MOSFETs and overcurrent protection.</li>
-              <li>Automated signal integrity verification, clock analysis, and power sequencing using bench oscilloscopes and logic analyzers.</li>
-              <li>Authored test scripts and automated bring-up routines, significantly reducing hardware debugging cycles.</li>
+              <li>Engineered 12V/24V high-current power stages with reverse-polarity P-MOSFETs, TVS surge protection, and overcurrent fuses.</li>
+              <li>Automated signal integrity verification, clock jitter analysis, and power sequencing using bench oscilloscopes and logic analyzers.</li>
+              <li>Authored test scripts and automated bring-up routines, significantly reducing hardware debugging cycles across multiple product revisions.</li>
             </ul>
           </article>
 
@@ -558,7 +598,7 @@
             <div class="edu-block">
               <h4>Undergraduate Thesis &amp; Capstone</h4>
               <p>
-                <strong>Autonomous Dual-MCU UAV Node for Edge AI Disaster Assessment:</strong> Designed, fabricated, and flight-tested a custom 4-layer dual-MCU PCB (STM32F405 + ESP32-S3) integrating real-time quantized neural inference (FOMO/MobileNetV2) and decentralized ESP-NOW mesh networking.
+                <strong>UAV Swarm for Autonomous Disaster Assessment:</strong> Supervised by Dr. Waqas Ahmad. Designed, fabricated, and flight-tested a custom 4-layer dual-MCU PCB (STM32F405 + ESP32-S3) integrating real-time quantized neural inference (FOMO/MobileNetV2) and decentralized ESP-NOW mesh networking across physical UAV nodes. Research paper submitted to IEEE FIT COMSATS (2026).
               </p>
             </div>
 
@@ -579,6 +619,9 @@
             <div class="edu-block">
               <h4>Honors &amp; Professional Certifications</h4>
               <ul class="cert-list">
+                <li><strong>USAID Merit &amp; Needs-Based Scholar:</strong> Prestigious 3-year award (~180,000 PKR / semester) funded by USAID &amp; HEC covering 100% undergraduate tuition, boarding, and monthly living stipend (2023–2026).</li>
+                <li><strong>Academic Standing:</strong> CGPA 3.64 / 4.00 (PIEAS)</li>
+                <li><strong>IEEE ISYWSC'24 Runner-up:</strong> Electro Masters Design Competition</li>
                 <li><strong>Certified Onshape Associate:</strong> Mechanical CAD &amp; 3D Modeling (PTC)</li>
                 <li><strong>AIAA Design Build Fly (DBF):</strong> Competitive Aerospace Engineering &amp; Autonomous Flight Validation</li>
                 <li><strong>ISYWC Delegate:</strong> International Space &amp; Youth Conference</li>
@@ -699,7 +742,7 @@
               <span class="sep">/</span>
               <a href="https://linkedin.com/in/mian-saad-karim" target="_blank" rel="noopener">LinkedIn</a>
               <span class="sep">/</span>
-              <a href="https://www.fiverr.com/users/mian_saad_karim" target="_blank" rel="noopener">Fiverr (5.0 ★)</a>
+              <a href="https://www.fiverr.com/users/mian_saad_karim" target="_blank" rel="noopener">Fiverr (4.8 ★)</a>
             </div>
           </div>
         </div>
